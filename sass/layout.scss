@@ -1,0 +1,203 @@
+// --- compass ---------------------------------------------------------------------------------------------------------
+
+@import "compass/reset";
+@import "compass/css3";
+
+// --- content variables -----------------------------------------------------------------------------------------------
+
+$background: #f2f2f2;
+$text-color: #444;
+
+$legacy-support-for-ie: false;
+$legacy-support-for-mozilla: false;
+$experimental-support-for-microsoft: false;
+
+// --- mixins ----------------------------------------------------------------------------------------------------------
+
+@mixin keyframes($name,
+                 $moz: $experimental-support-for-mozilla,
+                 $webkit: $experimental-support-for-webkit,
+                 $o: $experimental-support-for-opera,
+                 $ms: $experimental-support-for-microsoft,
+                 $khtml: $experimental-support-for-khtml,
+                 $official: true)
+{
+  @if $moz {
+    @include with-only-support-for($moz: true) {
+      @-moz-keyframes #{$name} { @content; }
+    }
+  }
+  @if $webkit {
+    @include with-only-support-for($webkit: true) {
+      @-webkit-keyframes #{$name} { @content; }
+    }
+  }
+  @if $o {
+    @include with-only-support-for($o: true) {
+      @-o-keyframes #{$name} { @content; }
+    }
+  }
+  @if $ms {
+    @include with-only-support-for($ms: true) {
+      @-ms-keyframes #{$name} { @content; }
+    }
+  }
+  @if $khtml {
+    @include with-only-support-for($khtml: true) {
+      @-khtml-keyframes #{$name} { @content; }
+    }
+  }
+  @if $official {
+    @include with-only-support-for {
+      @keyframes #{$name} { @content; }
+    }
+  }
+}
+
+// --- content ---------------------------------------------------------------------------------------------------------
+
+html, body
+{
+  height: 100%;
+}
+
+
+body
+{
+  font: 12px Helvetica, Arial, sans-serif;
+  background: $background;
+  color: $text-color;
+}
+
+.bar
+{
+  height: 20px;
+  padding: 10px;
+  background: #fff;
+  border-bottom: #e5e5e5;
+  text-align: left;
+  position: relative;
+  z-index: 100;
+  @include box-shadow(0 0 3px rgba(0, 0, 0, 0.15));
+
+  h1
+  {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+    .read-more
+    {
+      font-size: 12px;
+      line-height: 18px;
+      padding: 0 3px;
+      margin-top: 1px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #f52954;
+      vertical-align: top;
+      display: inline-block;
+
+      @include border-radius(3px);
+      @include transition(all .3s);
+
+      &:hover
+      {
+        background: #f52954;
+        color: #fff;
+      }
+    }
+  }
+
+  .social
+  {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+  }
+}
+
+// --- wave ------------------------------------------------------------------------------------------------------------
+
+.content
+{
+  min-height: 95%;
+  @include perspective(1200px);
+  @include perspective-origin(50% 0);
+}
+
+.wave
+{
+  width: 1000px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -500px;
+  text-align: center;
+  @include transform-style(preserve-3d);
+
+  ul
+  {
+    li
+    {
+      display: inline-block;
+      padding: 20px 25px;
+    }
+
+    @for $i from 1 through 15
+    {
+      &.row-#{$i}
+      {
+        $axisY: -$i * 50px;
+        $axisZ: -$i * 50px;
+        @include transform( translate3d(0, $axisY, $axisZ) );
+
+        li
+        {
+          @for $j from 1 through 15
+          {
+            &:nth-child(#{$j})
+            {
+              i
+              {
+                $delay: ($j * .2s) + ($i * .1s);
+                // $delay: ($j * .2s + ($i * 3));
+                @include animation(waving 3s $delay ease-in-out infinite);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  i
+  {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #333;
+    outline: 1px solid transparent;
+    @include border-radius(5px);
+    @include backface-visibility(hidden);
+  }
+}
+
+@include keyframes(waving) {
+  0%
+  {
+    @include transform( translate3d(0, 0, 0) );
+  }
+  50%
+  {
+    @include transform( translate3d(0, 250px, 0) scale(.5) );
+  }
+  100%
+  {
+    @include transform( translate3d(0, 0, 0) );
+  }
+}
