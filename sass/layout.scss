@@ -12,48 +12,6 @@ $legacy-support-for-ie: false;
 $legacy-support-for-mozilla: false;
 $experimental-support-for-microsoft: false;
 
-// --- mixins ----------------------------------------------------------------------------------------------------------
-
-@mixin keyframes($name,
-                 $moz: $experimental-support-for-mozilla,
-                 $webkit: $experimental-support-for-webkit,
-                 $o: $experimental-support-for-opera,
-                 $ms: $experimental-support-for-microsoft,
-                 $khtml: $experimental-support-for-khtml,
-                 $official: true)
-{
-  @if $moz {
-    @include with-only-support-for($moz: true) {
-      @-moz-keyframes #{$name} { @content; }
-    }
-  }
-  @if $webkit {
-    @include with-only-support-for($webkit: true) {
-      @-webkit-keyframes #{$name} { @content; }
-    }
-  }
-  @if $o {
-    @include with-only-support-for($o: true) {
-      @-o-keyframes #{$name} { @content; }
-    }
-  }
-  @if $ms {
-    @include with-only-support-for($ms: true) {
-      @-ms-keyframes #{$name} { @content; }
-    }
-  }
-  @if $khtml {
-    @include with-only-support-for($khtml: true) {
-      @-khtml-keyframes #{$name} { @content; }
-    }
-  }
-  @if $official {
-    @include with-only-support-for {
-      @keyframes #{$name} { @content; }
-    }
-  }
-}
-
 // --- content ---------------------------------------------------------------------------------------------------------
 
 html, body
@@ -136,7 +94,7 @@ body
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -25px 0 0 -500px;
+  margin: -125px 0 0 -500px;
   text-align: center;
   @include transform-style(preserve-3d);
 
