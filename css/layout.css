@@ -131,7 +131,11 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+<<<<<<< HEAD
   margin: -125px 0 0 -500px;
+=======
+  margin: -50px 0 0 -500px;
+>>>>>>> aedb692458f85cb5a273f0af0a80658aa2cf2c39
   text-align: center;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
