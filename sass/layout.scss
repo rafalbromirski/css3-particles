@@ -98,35 +98,23 @@ body
   text-align: center;
   @include transform-style(preserve-3d);
 
-  ul
+  @for $i from 1 through 15
   {
-    li
+    .row-#{$i}
     {
-      display: inline-block;
-      padding: 20px 25px;
-    }
+      $axisY: -$i * 50px;
+      $axisZ: -$i * 50px;
+      @include transform( translate3d(0, $axisY, $axisZ) );
 
-    @for $i from 1 through 15
-    {
-      &.row-#{$i}
+      > i
       {
-        $axisY: -$i * 50px;
-        $axisZ: -$i * 50px;
-        @include transform( translate3d(0, $axisY, $axisZ) );
-
-        li
+        @for $j from 1 through 15
         {
-          @for $j from 1 through 15
+          &:nth-child(#{$j})
           {
-            &:nth-child(#{$j})
-            {
-              i
-              {
-                $delay: ($j * .2s) + ($i * .1s);
-                // $delay: ($j * .2s + ($i * 3));
-                @include animation(waving 3s $delay ease-in-out infinite);
-              }
-            }
+            $delay: ($j * .2s) + ($i * .1s);
+            // $delay: ($j * .2s + ($i * 3));
+            @include animation(waving 3s $delay ease-in-out infinite);
           }
         }
       }
@@ -135,7 +123,8 @@ body
 
   i
   {
-    display: block;
+    display: inline-block;
+    margin: 20px 25px;
     width: 8px;
     height: 8px;
     background: #333;
