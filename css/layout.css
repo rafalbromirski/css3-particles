@@ -96,11 +96,9 @@ body {
   display: inline-block;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .bar h1 .read-more:hover {
@@ -113,19 +111,54 @@ body {
   right: 10px;
 }
 
+.button {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  margin: 0 0 0 -100px;
+  border: 3px solid #c2c2c2;
+  color: #999;
+  text-align: center;
+  line-height: 20px;
+  padding: 8px 0;
+  z-index: 100;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.3s, top 0s 0.3s;
+  -moz-transition: all 0.3s, top 0s 0.3s;
+  transition: all 0.3s, top 0s 0.3s;
+}
+.button:hover {
+  border-color: #333;
+  color: #333;
+}
+.button.hide {
+  opacity: 0;
+  cursor: default;
+  top: -100px;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .content {
   min-height: 95%;
   -webkit-perspective: 1200px;
   -moz-perspective: 1200px;
-  -o-perspective: 1200px;
   perspective: 1200px;
   -webkit-perspective-origin: 50% 0;
   -moz-perspective-origin: 50% 0;
-  -o-perspective-origin: 50% 0;
   perspective-origin: 50% 0;
 }
 
-.wave {
+.particles {
   width: 1000px;
   height: 50px;
   position: absolute;
@@ -135,1450 +168,1209 @@ body {
   text-align: center;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.wave .row-1 {
+.particles .row-1 {
   -webkit-transform: translate3d(0, -50px, -50px);
   -moz-transform: translate3d(0, -50px, -50px);
-  -o-transform: translate3d(0, -50px, -50px);
   transform: translate3d(0, -50px, -50px);
 }
-.wave .row-1 > i:nth-child(1) {
-  -webkit-animation: waving 3s 0.3s ease-in-out infinite;
-  -moz-animation: waving 3s 0.3s ease-in-out infinite;
-  -o-animation: waving 3s 0.3s ease-in-out infinite;
-  animation: waving 3s 0.3s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(2) {
-  -webkit-animation: waving 3s 0.5s ease-in-out infinite;
-  -moz-animation: waving 3s 0.5s ease-in-out infinite;
-  -o-animation: waving 3s 0.5s ease-in-out infinite;
-  animation: waving 3s 0.5s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(3) {
-  -webkit-animation: waving 3s 0.7s ease-in-out infinite;
-  -moz-animation: waving 3s 0.7s ease-in-out infinite;
-  -o-animation: waving 3s 0.7s ease-in-out infinite;
-  animation: waving 3s 0.7s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(4) {
-  -webkit-animation: waving 3s 0.9s ease-in-out infinite;
-  -moz-animation: waving 3s 0.9s ease-in-out infinite;
-  -o-animation: waving 3s 0.9s ease-in-out infinite;
-  animation: waving 3s 0.9s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(5) {
-  -webkit-animation: waving 3s 1.1s ease-in-out infinite;
-  -moz-animation: waving 3s 1.1s ease-in-out infinite;
-  -o-animation: waving 3s 1.1s ease-in-out infinite;
-  animation: waving 3s 1.1s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(6) {
-  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
-  -moz-animation: waving 3s 1.3s ease-in-out infinite;
-  -o-animation: waving 3s 1.3s ease-in-out infinite;
-  animation: waving 3s 1.3s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(7) {
-  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
-  -moz-animation: waving 3s 1.5s ease-in-out infinite;
-  -o-animation: waving 3s 1.5s ease-in-out infinite;
-  animation: waving 3s 1.5s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(8) {
-  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
-  -moz-animation: waving 3s 1.7s ease-in-out infinite;
-  -o-animation: waving 3s 1.7s ease-in-out infinite;
-  animation: waving 3s 1.7s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(9) {
-  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
-  -moz-animation: waving 3s 1.9s ease-in-out infinite;
-  -o-animation: waving 3s 1.9s ease-in-out infinite;
-  animation: waving 3s 1.9s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(10) {
-  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
-  -moz-animation: waving 3s 2.1s ease-in-out infinite;
-  -o-animation: waving 3s 2.1s ease-in-out infinite;
-  animation: waving 3s 2.1s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(11) {
-  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
-  -moz-animation: waving 3s 2.3s ease-in-out infinite;
-  -o-animation: waving 3s 2.3s ease-in-out infinite;
-  animation: waving 3s 2.3s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(12) {
-  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
-  -moz-animation: waving 3s 2.5s ease-in-out infinite;
-  -o-animation: waving 3s 2.5s ease-in-out infinite;
-  animation: waving 3s 2.5s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(13) {
-  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
-  -moz-animation: waving 3s 2.7s ease-in-out infinite;
-  -o-animation: waving 3s 2.7s ease-in-out infinite;
-  animation: waving 3s 2.7s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(14) {
-  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
-  -moz-animation: waving 3s 2.9s ease-in-out infinite;
-  -o-animation: waving 3s 2.9s ease-in-out infinite;
-  animation: waving 3s 2.9s ease-in-out infinite;
-}
-.wave .row-1 > i:nth-child(15) {
-  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
-  -moz-animation: waving 3s 3.1s ease-in-out infinite;
-  -o-animation: waving 3s 3.1s ease-in-out infinite;
-  animation: waving 3s 3.1s ease-in-out infinite;
-}
-.wave .row-2 {
+.particles .row-2 {
   -webkit-transform: translate3d(0, -100px, -100px);
   -moz-transform: translate3d(0, -100px, -100px);
-  -o-transform: translate3d(0, -100px, -100px);
   transform: translate3d(0, -100px, -100px);
 }
-.wave .row-2 > i:nth-child(1) {
-  -webkit-animation: waving 3s 0.4s ease-in-out infinite;
-  -moz-animation: waving 3s 0.4s ease-in-out infinite;
-  -o-animation: waving 3s 0.4s ease-in-out infinite;
-  animation: waving 3s 0.4s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(2) {
-  -webkit-animation: waving 3s 0.6s ease-in-out infinite;
-  -moz-animation: waving 3s 0.6s ease-in-out infinite;
-  -o-animation: waving 3s 0.6s ease-in-out infinite;
-  animation: waving 3s 0.6s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(3) {
-  -webkit-animation: waving 3s 0.8s ease-in-out infinite;
-  -moz-animation: waving 3s 0.8s ease-in-out infinite;
-  -o-animation: waving 3s 0.8s ease-in-out infinite;
-  animation: waving 3s 0.8s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(4) {
-  -webkit-animation: waving 3s 1s ease-in-out infinite;
-  -moz-animation: waving 3s 1s ease-in-out infinite;
-  -o-animation: waving 3s 1s ease-in-out infinite;
-  animation: waving 3s 1s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(5) {
-  -webkit-animation: waving 3s 1.2s ease-in-out infinite;
-  -moz-animation: waving 3s 1.2s ease-in-out infinite;
-  -o-animation: waving 3s 1.2s ease-in-out infinite;
-  animation: waving 3s 1.2s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(6) {
-  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
-  -moz-animation: waving 3s 1.4s ease-in-out infinite;
-  -o-animation: waving 3s 1.4s ease-in-out infinite;
-  animation: waving 3s 1.4s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(7) {
-  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
-  -moz-animation: waving 3s 1.6s ease-in-out infinite;
-  -o-animation: waving 3s 1.6s ease-in-out infinite;
-  animation: waving 3s 1.6s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(8) {
-  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
-  -moz-animation: waving 3s 1.8s ease-in-out infinite;
-  -o-animation: waving 3s 1.8s ease-in-out infinite;
-  animation: waving 3s 1.8s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(9) {
-  -webkit-animation: waving 3s 2s ease-in-out infinite;
-  -moz-animation: waving 3s 2s ease-in-out infinite;
-  -o-animation: waving 3s 2s ease-in-out infinite;
-  animation: waving 3s 2s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(10) {
-  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
-  -moz-animation: waving 3s 2.2s ease-in-out infinite;
-  -o-animation: waving 3s 2.2s ease-in-out infinite;
-  animation: waving 3s 2.2s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(11) {
-  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
-  -moz-animation: waving 3s 2.4s ease-in-out infinite;
-  -o-animation: waving 3s 2.4s ease-in-out infinite;
-  animation: waving 3s 2.4s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(12) {
-  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
-  -moz-animation: waving 3s 2.6s ease-in-out infinite;
-  -o-animation: waving 3s 2.6s ease-in-out infinite;
-  animation: waving 3s 2.6s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(13) {
-  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
-  -moz-animation: waving 3s 2.8s ease-in-out infinite;
-  -o-animation: waving 3s 2.8s ease-in-out infinite;
-  animation: waving 3s 2.8s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(14) {
-  -webkit-animation: waving 3s 3.0s ease-in-out infinite;
-  -moz-animation: waving 3s 3.0s ease-in-out infinite;
-  -o-animation: waving 3s 3.0s ease-in-out infinite;
-  animation: waving 3s 3.0s ease-in-out infinite;
-}
-.wave .row-2 > i:nth-child(15) {
-  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
-  -moz-animation: waving 3s 3.2s ease-in-out infinite;
-  -o-animation: waving 3s 3.2s ease-in-out infinite;
-  animation: waving 3s 3.2s ease-in-out infinite;
-}
-.wave .row-3 {
+.particles .row-3 {
   -webkit-transform: translate3d(0, -150px, -150px);
   -moz-transform: translate3d(0, -150px, -150px);
-  -o-transform: translate3d(0, -150px, -150px);
   transform: translate3d(0, -150px, -150px);
 }
-.wave .row-3 > i:nth-child(1) {
-  -webkit-animation: waving 3s 0.5s ease-in-out infinite;
-  -moz-animation: waving 3s 0.5s ease-in-out infinite;
-  -o-animation: waving 3s 0.5s ease-in-out infinite;
-  animation: waving 3s 0.5s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(2) {
-  -webkit-animation: waving 3s 0.7s ease-in-out infinite;
-  -moz-animation: waving 3s 0.7s ease-in-out infinite;
-  -o-animation: waving 3s 0.7s ease-in-out infinite;
-  animation: waving 3s 0.7s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(3) {
-  -webkit-animation: waving 3s 0.9s ease-in-out infinite;
-  -moz-animation: waving 3s 0.9s ease-in-out infinite;
-  -o-animation: waving 3s 0.9s ease-in-out infinite;
-  animation: waving 3s 0.9s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(4) {
-  -webkit-animation: waving 3s 1.1s ease-in-out infinite;
-  -moz-animation: waving 3s 1.1s ease-in-out infinite;
-  -o-animation: waving 3s 1.1s ease-in-out infinite;
-  animation: waving 3s 1.1s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(5) {
-  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
-  -moz-animation: waving 3s 1.3s ease-in-out infinite;
-  -o-animation: waving 3s 1.3s ease-in-out infinite;
-  animation: waving 3s 1.3s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(6) {
-  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
-  -moz-animation: waving 3s 1.5s ease-in-out infinite;
-  -o-animation: waving 3s 1.5s ease-in-out infinite;
-  animation: waving 3s 1.5s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(7) {
-  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
-  -moz-animation: waving 3s 1.7s ease-in-out infinite;
-  -o-animation: waving 3s 1.7s ease-in-out infinite;
-  animation: waving 3s 1.7s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(8) {
-  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
-  -moz-animation: waving 3s 1.9s ease-in-out infinite;
-  -o-animation: waving 3s 1.9s ease-in-out infinite;
-  animation: waving 3s 1.9s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(9) {
-  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
-  -moz-animation: waving 3s 2.1s ease-in-out infinite;
-  -o-animation: waving 3s 2.1s ease-in-out infinite;
-  animation: waving 3s 2.1s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(10) {
-  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
-  -moz-animation: waving 3s 2.3s ease-in-out infinite;
-  -o-animation: waving 3s 2.3s ease-in-out infinite;
-  animation: waving 3s 2.3s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(11) {
-  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
-  -moz-animation: waving 3s 2.5s ease-in-out infinite;
-  -o-animation: waving 3s 2.5s ease-in-out infinite;
-  animation: waving 3s 2.5s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(12) {
-  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
-  -moz-animation: waving 3s 2.7s ease-in-out infinite;
-  -o-animation: waving 3s 2.7s ease-in-out infinite;
-  animation: waving 3s 2.7s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(13) {
-  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
-  -moz-animation: waving 3s 2.9s ease-in-out infinite;
-  -o-animation: waving 3s 2.9s ease-in-out infinite;
-  animation: waving 3s 2.9s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(14) {
-  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
-  -moz-animation: waving 3s 3.1s ease-in-out infinite;
-  -o-animation: waving 3s 3.1s ease-in-out infinite;
-  animation: waving 3s 3.1s ease-in-out infinite;
-}
-.wave .row-3 > i:nth-child(15) {
-  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
-  -moz-animation: waving 3s 3.3s ease-in-out infinite;
-  -o-animation: waving 3s 3.3s ease-in-out infinite;
-  animation: waving 3s 3.3s ease-in-out infinite;
-}
-.wave .row-4 {
+.particles .row-4 {
   -webkit-transform: translate3d(0, -200px, -200px);
   -moz-transform: translate3d(0, -200px, -200px);
-  -o-transform: translate3d(0, -200px, -200px);
   transform: translate3d(0, -200px, -200px);
 }
-.wave .row-4 > i:nth-child(1) {
-  -webkit-animation: waving 3s 0.6s ease-in-out infinite;
-  -moz-animation: waving 3s 0.6s ease-in-out infinite;
-  -o-animation: waving 3s 0.6s ease-in-out infinite;
-  animation: waving 3s 0.6s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(2) {
-  -webkit-animation: waving 3s 0.8s ease-in-out infinite;
-  -moz-animation: waving 3s 0.8s ease-in-out infinite;
-  -o-animation: waving 3s 0.8s ease-in-out infinite;
-  animation: waving 3s 0.8s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(3) {
-  -webkit-animation: waving 3s 1s ease-in-out infinite;
-  -moz-animation: waving 3s 1s ease-in-out infinite;
-  -o-animation: waving 3s 1s ease-in-out infinite;
-  animation: waving 3s 1s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(4) {
-  -webkit-animation: waving 3s 1.2s ease-in-out infinite;
-  -moz-animation: waving 3s 1.2s ease-in-out infinite;
-  -o-animation: waving 3s 1.2s ease-in-out infinite;
-  animation: waving 3s 1.2s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(5) {
-  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
-  -moz-animation: waving 3s 1.4s ease-in-out infinite;
-  -o-animation: waving 3s 1.4s ease-in-out infinite;
-  animation: waving 3s 1.4s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(6) {
-  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
-  -moz-animation: waving 3s 1.6s ease-in-out infinite;
-  -o-animation: waving 3s 1.6s ease-in-out infinite;
-  animation: waving 3s 1.6s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(7) {
-  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
-  -moz-animation: waving 3s 1.8s ease-in-out infinite;
-  -o-animation: waving 3s 1.8s ease-in-out infinite;
-  animation: waving 3s 1.8s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(8) {
-  -webkit-animation: waving 3s 2s ease-in-out infinite;
-  -moz-animation: waving 3s 2s ease-in-out infinite;
-  -o-animation: waving 3s 2s ease-in-out infinite;
-  animation: waving 3s 2s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(9) {
-  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
-  -moz-animation: waving 3s 2.2s ease-in-out infinite;
-  -o-animation: waving 3s 2.2s ease-in-out infinite;
-  animation: waving 3s 2.2s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(10) {
-  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
-  -moz-animation: waving 3s 2.4s ease-in-out infinite;
-  -o-animation: waving 3s 2.4s ease-in-out infinite;
-  animation: waving 3s 2.4s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(11) {
-  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
-  -moz-animation: waving 3s 2.6s ease-in-out infinite;
-  -o-animation: waving 3s 2.6s ease-in-out infinite;
-  animation: waving 3s 2.6s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(12) {
-  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
-  -moz-animation: waving 3s 2.8s ease-in-out infinite;
-  -o-animation: waving 3s 2.8s ease-in-out infinite;
-  animation: waving 3s 2.8s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(13) {
-  -webkit-animation: waving 3s 3s ease-in-out infinite;
-  -moz-animation: waving 3s 3s ease-in-out infinite;
-  -o-animation: waving 3s 3s ease-in-out infinite;
-  animation: waving 3s 3s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(14) {
-  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
-  -moz-animation: waving 3s 3.2s ease-in-out infinite;
-  -o-animation: waving 3s 3.2s ease-in-out infinite;
-  animation: waving 3s 3.2s ease-in-out infinite;
-}
-.wave .row-4 > i:nth-child(15) {
-  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
-  -moz-animation: waving 3s 3.4s ease-in-out infinite;
-  -o-animation: waving 3s 3.4s ease-in-out infinite;
-  animation: waving 3s 3.4s ease-in-out infinite;
-}
-.wave .row-5 {
+.particles .row-5 {
   -webkit-transform: translate3d(0, -250px, -250px);
   -moz-transform: translate3d(0, -250px, -250px);
-  -o-transform: translate3d(0, -250px, -250px);
   transform: translate3d(0, -250px, -250px);
 }
-.wave .row-5 > i:nth-child(1) {
-  -webkit-animation: waving 3s 0.7s ease-in-out infinite;
-  -moz-animation: waving 3s 0.7s ease-in-out infinite;
-  -o-animation: waving 3s 0.7s ease-in-out infinite;
-  animation: waving 3s 0.7s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(2) {
-  -webkit-animation: waving 3s 0.9s ease-in-out infinite;
-  -moz-animation: waving 3s 0.9s ease-in-out infinite;
-  -o-animation: waving 3s 0.9s ease-in-out infinite;
-  animation: waving 3s 0.9s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(3) {
-  -webkit-animation: waving 3s 1.1s ease-in-out infinite;
-  -moz-animation: waving 3s 1.1s ease-in-out infinite;
-  -o-animation: waving 3s 1.1s ease-in-out infinite;
-  animation: waving 3s 1.1s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(4) {
-  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
-  -moz-animation: waving 3s 1.3s ease-in-out infinite;
-  -o-animation: waving 3s 1.3s ease-in-out infinite;
-  animation: waving 3s 1.3s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(5) {
-  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
-  -moz-animation: waving 3s 1.5s ease-in-out infinite;
-  -o-animation: waving 3s 1.5s ease-in-out infinite;
-  animation: waving 3s 1.5s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(6) {
-  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
-  -moz-animation: waving 3s 1.7s ease-in-out infinite;
-  -o-animation: waving 3s 1.7s ease-in-out infinite;
-  animation: waving 3s 1.7s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(7) {
-  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
-  -moz-animation: waving 3s 1.9s ease-in-out infinite;
-  -o-animation: waving 3s 1.9s ease-in-out infinite;
-  animation: waving 3s 1.9s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(8) {
-  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
-  -moz-animation: waving 3s 2.1s ease-in-out infinite;
-  -o-animation: waving 3s 2.1s ease-in-out infinite;
-  animation: waving 3s 2.1s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(9) {
-  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
-  -moz-animation: waving 3s 2.3s ease-in-out infinite;
-  -o-animation: waving 3s 2.3s ease-in-out infinite;
-  animation: waving 3s 2.3s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(10) {
-  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
-  -moz-animation: waving 3s 2.5s ease-in-out infinite;
-  -o-animation: waving 3s 2.5s ease-in-out infinite;
-  animation: waving 3s 2.5s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(11) {
-  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
-  -moz-animation: waving 3s 2.7s ease-in-out infinite;
-  -o-animation: waving 3s 2.7s ease-in-out infinite;
-  animation: waving 3s 2.7s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(12) {
-  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
-  -moz-animation: waving 3s 2.9s ease-in-out infinite;
-  -o-animation: waving 3s 2.9s ease-in-out infinite;
-  animation: waving 3s 2.9s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(13) {
-  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
-  -moz-animation: waving 3s 3.1s ease-in-out infinite;
-  -o-animation: waving 3s 3.1s ease-in-out infinite;
-  animation: waving 3s 3.1s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(14) {
-  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
-  -moz-animation: waving 3s 3.3s ease-in-out infinite;
-  -o-animation: waving 3s 3.3s ease-in-out infinite;
-  animation: waving 3s 3.3s ease-in-out infinite;
-}
-.wave .row-5 > i:nth-child(15) {
-  -webkit-animation: waving 3s 3.5s ease-in-out infinite;
-  -moz-animation: waving 3s 3.5s ease-in-out infinite;
-  -o-animation: waving 3s 3.5s ease-in-out infinite;
-  animation: waving 3s 3.5s ease-in-out infinite;
-}
-.wave .row-6 {
+.particles .row-6 {
   -webkit-transform: translate3d(0, -300px, -300px);
   -moz-transform: translate3d(0, -300px, -300px);
-  -o-transform: translate3d(0, -300px, -300px);
   transform: translate3d(0, -300px, -300px);
 }
-.wave .row-6 > i:nth-child(1) {
-  -webkit-animation: waving 3s 0.8s ease-in-out infinite;
-  -moz-animation: waving 3s 0.8s ease-in-out infinite;
-  -o-animation: waving 3s 0.8s ease-in-out infinite;
-  animation: waving 3s 0.8s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(2) {
-  -webkit-animation: waving 3s 1s ease-in-out infinite;
-  -moz-animation: waving 3s 1s ease-in-out infinite;
-  -o-animation: waving 3s 1s ease-in-out infinite;
-  animation: waving 3s 1s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(3) {
-  -webkit-animation: waving 3s 1.2s ease-in-out infinite;
-  -moz-animation: waving 3s 1.2s ease-in-out infinite;
-  -o-animation: waving 3s 1.2s ease-in-out infinite;
-  animation: waving 3s 1.2s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(4) {
-  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
-  -moz-animation: waving 3s 1.4s ease-in-out infinite;
-  -o-animation: waving 3s 1.4s ease-in-out infinite;
-  animation: waving 3s 1.4s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(5) {
-  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
-  -moz-animation: waving 3s 1.6s ease-in-out infinite;
-  -o-animation: waving 3s 1.6s ease-in-out infinite;
-  animation: waving 3s 1.6s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(6) {
-  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
-  -moz-animation: waving 3s 1.8s ease-in-out infinite;
-  -o-animation: waving 3s 1.8s ease-in-out infinite;
-  animation: waving 3s 1.8s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(7) {
-  -webkit-animation: waving 3s 2s ease-in-out infinite;
-  -moz-animation: waving 3s 2s ease-in-out infinite;
-  -o-animation: waving 3s 2s ease-in-out infinite;
-  animation: waving 3s 2s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(8) {
-  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
-  -moz-animation: waving 3s 2.2s ease-in-out infinite;
-  -o-animation: waving 3s 2.2s ease-in-out infinite;
-  animation: waving 3s 2.2s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(9) {
-  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
-  -moz-animation: waving 3s 2.4s ease-in-out infinite;
-  -o-animation: waving 3s 2.4s ease-in-out infinite;
-  animation: waving 3s 2.4s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(10) {
-  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
-  -moz-animation: waving 3s 2.6s ease-in-out infinite;
-  -o-animation: waving 3s 2.6s ease-in-out infinite;
-  animation: waving 3s 2.6s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(11) {
-  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
-  -moz-animation: waving 3s 2.8s ease-in-out infinite;
-  -o-animation: waving 3s 2.8s ease-in-out infinite;
-  animation: waving 3s 2.8s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(12) {
-  -webkit-animation: waving 3s 3.0s ease-in-out infinite;
-  -moz-animation: waving 3s 3.0s ease-in-out infinite;
-  -o-animation: waving 3s 3.0s ease-in-out infinite;
-  animation: waving 3s 3.0s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(13) {
-  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
-  -moz-animation: waving 3s 3.2s ease-in-out infinite;
-  -o-animation: waving 3s 3.2s ease-in-out infinite;
-  animation: waving 3s 3.2s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(14) {
-  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
-  -moz-animation: waving 3s 3.4s ease-in-out infinite;
-  -o-animation: waving 3s 3.4s ease-in-out infinite;
-  animation: waving 3s 3.4s ease-in-out infinite;
-}
-.wave .row-6 > i:nth-child(15) {
-  -webkit-animation: waving 3s 3.6s ease-in-out infinite;
-  -moz-animation: waving 3s 3.6s ease-in-out infinite;
-  -o-animation: waving 3s 3.6s ease-in-out infinite;
-  animation: waving 3s 3.6s ease-in-out infinite;
-}
-.wave .row-7 {
+.particles .row-7 {
   -webkit-transform: translate3d(0, -350px, -350px);
   -moz-transform: translate3d(0, -350px, -350px);
-  -o-transform: translate3d(0, -350px, -350px);
   transform: translate3d(0, -350px, -350px);
 }
-.wave .row-7 > i:nth-child(1) {
-  -webkit-animation: waving 3s 0.9s ease-in-out infinite;
-  -moz-animation: waving 3s 0.9s ease-in-out infinite;
-  -o-animation: waving 3s 0.9s ease-in-out infinite;
-  animation: waving 3s 0.9s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(2) {
-  -webkit-animation: waving 3s 1.1s ease-in-out infinite;
-  -moz-animation: waving 3s 1.1s ease-in-out infinite;
-  -o-animation: waving 3s 1.1s ease-in-out infinite;
-  animation: waving 3s 1.1s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(3) {
-  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
-  -moz-animation: waving 3s 1.3s ease-in-out infinite;
-  -o-animation: waving 3s 1.3s ease-in-out infinite;
-  animation: waving 3s 1.3s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(4) {
-  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
-  -moz-animation: waving 3s 1.5s ease-in-out infinite;
-  -o-animation: waving 3s 1.5s ease-in-out infinite;
-  animation: waving 3s 1.5s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(5) {
-  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
-  -moz-animation: waving 3s 1.7s ease-in-out infinite;
-  -o-animation: waving 3s 1.7s ease-in-out infinite;
-  animation: waving 3s 1.7s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(6) {
-  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
-  -moz-animation: waving 3s 1.9s ease-in-out infinite;
-  -o-animation: waving 3s 1.9s ease-in-out infinite;
-  animation: waving 3s 1.9s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(7) {
-  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
-  -moz-animation: waving 3s 2.1s ease-in-out infinite;
-  -o-animation: waving 3s 2.1s ease-in-out infinite;
-  animation: waving 3s 2.1s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(8) {
-  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
-  -moz-animation: waving 3s 2.3s ease-in-out infinite;
-  -o-animation: waving 3s 2.3s ease-in-out infinite;
-  animation: waving 3s 2.3s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(9) {
-  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
-  -moz-animation: waving 3s 2.5s ease-in-out infinite;
-  -o-animation: waving 3s 2.5s ease-in-out infinite;
-  animation: waving 3s 2.5s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(10) {
-  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
-  -moz-animation: waving 3s 2.7s ease-in-out infinite;
-  -o-animation: waving 3s 2.7s ease-in-out infinite;
-  animation: waving 3s 2.7s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(11) {
-  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
-  -moz-animation: waving 3s 2.9s ease-in-out infinite;
-  -o-animation: waving 3s 2.9s ease-in-out infinite;
-  animation: waving 3s 2.9s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(12) {
-  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
-  -moz-animation: waving 3s 3.1s ease-in-out infinite;
-  -o-animation: waving 3s 3.1s ease-in-out infinite;
-  animation: waving 3s 3.1s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(13) {
-  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
-  -moz-animation: waving 3s 3.3s ease-in-out infinite;
-  -o-animation: waving 3s 3.3s ease-in-out infinite;
-  animation: waving 3s 3.3s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(14) {
-  -webkit-animation: waving 3s 3.5s ease-in-out infinite;
-  -moz-animation: waving 3s 3.5s ease-in-out infinite;
-  -o-animation: waving 3s 3.5s ease-in-out infinite;
-  animation: waving 3s 3.5s ease-in-out infinite;
-}
-.wave .row-7 > i:nth-child(15) {
-  -webkit-animation: waving 3s 3.7s ease-in-out infinite;
-  -moz-animation: waving 3s 3.7s ease-in-out infinite;
-  -o-animation: waving 3s 3.7s ease-in-out infinite;
-  animation: waving 3s 3.7s ease-in-out infinite;
-}
-.wave .row-8 {
+.particles .row-8 {
   -webkit-transform: translate3d(0, -400px, -400px);
   -moz-transform: translate3d(0, -400px, -400px);
-  -o-transform: translate3d(0, -400px, -400px);
   transform: translate3d(0, -400px, -400px);
 }
-.wave .row-8 > i:nth-child(1) {
-  -webkit-animation: waving 3s 1s ease-in-out infinite;
-  -moz-animation: waving 3s 1s ease-in-out infinite;
-  -o-animation: waving 3s 1s ease-in-out infinite;
-  animation: waving 3s 1s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(2) {
-  -webkit-animation: waving 3s 1.2s ease-in-out infinite;
-  -moz-animation: waving 3s 1.2s ease-in-out infinite;
-  -o-animation: waving 3s 1.2s ease-in-out infinite;
-  animation: waving 3s 1.2s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(3) {
-  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
-  -moz-animation: waving 3s 1.4s ease-in-out infinite;
-  -o-animation: waving 3s 1.4s ease-in-out infinite;
-  animation: waving 3s 1.4s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(4) {
-  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
-  -moz-animation: waving 3s 1.6s ease-in-out infinite;
-  -o-animation: waving 3s 1.6s ease-in-out infinite;
-  animation: waving 3s 1.6s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(5) {
-  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
-  -moz-animation: waving 3s 1.8s ease-in-out infinite;
-  -o-animation: waving 3s 1.8s ease-in-out infinite;
-  animation: waving 3s 1.8s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(6) {
-  -webkit-animation: waving 3s 2s ease-in-out infinite;
-  -moz-animation: waving 3s 2s ease-in-out infinite;
-  -o-animation: waving 3s 2s ease-in-out infinite;
-  animation: waving 3s 2s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(7) {
-  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
-  -moz-animation: waving 3s 2.2s ease-in-out infinite;
-  -o-animation: waving 3s 2.2s ease-in-out infinite;
-  animation: waving 3s 2.2s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(8) {
-  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
-  -moz-animation: waving 3s 2.4s ease-in-out infinite;
-  -o-animation: waving 3s 2.4s ease-in-out infinite;
-  animation: waving 3s 2.4s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(9) {
-  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
-  -moz-animation: waving 3s 2.6s ease-in-out infinite;
-  -o-animation: waving 3s 2.6s ease-in-out infinite;
-  animation: waving 3s 2.6s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(10) {
-  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
-  -moz-animation: waving 3s 2.8s ease-in-out infinite;
-  -o-animation: waving 3s 2.8s ease-in-out infinite;
-  animation: waving 3s 2.8s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(11) {
-  -webkit-animation: waving 3s 3s ease-in-out infinite;
-  -moz-animation: waving 3s 3s ease-in-out infinite;
-  -o-animation: waving 3s 3s ease-in-out infinite;
-  animation: waving 3s 3s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(12) {
-  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
-  -moz-animation: waving 3s 3.2s ease-in-out infinite;
-  -o-animation: waving 3s 3.2s ease-in-out infinite;
-  animation: waving 3s 3.2s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(13) {
-  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
-  -moz-animation: waving 3s 3.4s ease-in-out infinite;
-  -o-animation: waving 3s 3.4s ease-in-out infinite;
-  animation: waving 3s 3.4s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(14) {
-  -webkit-animation: waving 3s 3.6s ease-in-out infinite;
-  -moz-animation: waving 3s 3.6s ease-in-out infinite;
-  -o-animation: waving 3s 3.6s ease-in-out infinite;
-  animation: waving 3s 3.6s ease-in-out infinite;
-}
-.wave .row-8 > i:nth-child(15) {
-  -webkit-animation: waving 3s 3.8s ease-in-out infinite;
-  -moz-animation: waving 3s 3.8s ease-in-out infinite;
-  -o-animation: waving 3s 3.8s ease-in-out infinite;
-  animation: waving 3s 3.8s ease-in-out infinite;
-}
-.wave .row-9 {
+.particles .row-9 {
   -webkit-transform: translate3d(0, -450px, -450px);
   -moz-transform: translate3d(0, -450px, -450px);
-  -o-transform: translate3d(0, -450px, -450px);
   transform: translate3d(0, -450px, -450px);
 }
-.wave .row-9 > i:nth-child(1) {
-  -webkit-animation: waving 3s 1.1s ease-in-out infinite;
-  -moz-animation: waving 3s 1.1s ease-in-out infinite;
-  -o-animation: waving 3s 1.1s ease-in-out infinite;
-  animation: waving 3s 1.1s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(2) {
-  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
-  -moz-animation: waving 3s 1.3s ease-in-out infinite;
-  -o-animation: waving 3s 1.3s ease-in-out infinite;
-  animation: waving 3s 1.3s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(3) {
-  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
-  -moz-animation: waving 3s 1.5s ease-in-out infinite;
-  -o-animation: waving 3s 1.5s ease-in-out infinite;
-  animation: waving 3s 1.5s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(4) {
-  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
-  -moz-animation: waving 3s 1.7s ease-in-out infinite;
-  -o-animation: waving 3s 1.7s ease-in-out infinite;
-  animation: waving 3s 1.7s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(5) {
-  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
-  -moz-animation: waving 3s 1.9s ease-in-out infinite;
-  -o-animation: waving 3s 1.9s ease-in-out infinite;
-  animation: waving 3s 1.9s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(6) {
-  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
-  -moz-animation: waving 3s 2.1s ease-in-out infinite;
-  -o-animation: waving 3s 2.1s ease-in-out infinite;
-  animation: waving 3s 2.1s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(7) {
-  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
-  -moz-animation: waving 3s 2.3s ease-in-out infinite;
-  -o-animation: waving 3s 2.3s ease-in-out infinite;
-  animation: waving 3s 2.3s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(8) {
-  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
-  -moz-animation: waving 3s 2.5s ease-in-out infinite;
-  -o-animation: waving 3s 2.5s ease-in-out infinite;
-  animation: waving 3s 2.5s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(9) {
-  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
-  -moz-animation: waving 3s 2.7s ease-in-out infinite;
-  -o-animation: waving 3s 2.7s ease-in-out infinite;
-  animation: waving 3s 2.7s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(10) {
-  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
-  -moz-animation: waving 3s 2.9s ease-in-out infinite;
-  -o-animation: waving 3s 2.9s ease-in-out infinite;
-  animation: waving 3s 2.9s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(11) {
-  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
-  -moz-animation: waving 3s 3.1s ease-in-out infinite;
-  -o-animation: waving 3s 3.1s ease-in-out infinite;
-  animation: waving 3s 3.1s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(12) {
-  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
-  -moz-animation: waving 3s 3.3s ease-in-out infinite;
-  -o-animation: waving 3s 3.3s ease-in-out infinite;
-  animation: waving 3s 3.3s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(13) {
-  -webkit-animation: waving 3s 3.5s ease-in-out infinite;
-  -moz-animation: waving 3s 3.5s ease-in-out infinite;
-  -o-animation: waving 3s 3.5s ease-in-out infinite;
-  animation: waving 3s 3.5s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(14) {
-  -webkit-animation: waving 3s 3.7s ease-in-out infinite;
-  -moz-animation: waving 3s 3.7s ease-in-out infinite;
-  -o-animation: waving 3s 3.7s ease-in-out infinite;
-  animation: waving 3s 3.7s ease-in-out infinite;
-}
-.wave .row-9 > i:nth-child(15) {
-  -webkit-animation: waving 3s 3.9s ease-in-out infinite;
-  -moz-animation: waving 3s 3.9s ease-in-out infinite;
-  -o-animation: waving 3s 3.9s ease-in-out infinite;
-  animation: waving 3s 3.9s ease-in-out infinite;
-}
-.wave .row-10 {
+.particles .row-10 {
   -webkit-transform: translate3d(0, -500px, -500px);
   -moz-transform: translate3d(0, -500px, -500px);
-  -o-transform: translate3d(0, -500px, -500px);
   transform: translate3d(0, -500px, -500px);
 }
-.wave .row-10 > i:nth-child(1) {
-  -webkit-animation: waving 3s 1.2s ease-in-out infinite;
-  -moz-animation: waving 3s 1.2s ease-in-out infinite;
-  -o-animation: waving 3s 1.2s ease-in-out infinite;
-  animation: waving 3s 1.2s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(2) {
-  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
-  -moz-animation: waving 3s 1.4s ease-in-out infinite;
-  -o-animation: waving 3s 1.4s ease-in-out infinite;
-  animation: waving 3s 1.4s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(3) {
-  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
-  -moz-animation: waving 3s 1.6s ease-in-out infinite;
-  -o-animation: waving 3s 1.6s ease-in-out infinite;
-  animation: waving 3s 1.6s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(4) {
-  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
-  -moz-animation: waving 3s 1.8s ease-in-out infinite;
-  -o-animation: waving 3s 1.8s ease-in-out infinite;
-  animation: waving 3s 1.8s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(5) {
-  -webkit-animation: waving 3s 2s ease-in-out infinite;
-  -moz-animation: waving 3s 2s ease-in-out infinite;
-  -o-animation: waving 3s 2s ease-in-out infinite;
-  animation: waving 3s 2s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(6) {
-  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
-  -moz-animation: waving 3s 2.2s ease-in-out infinite;
-  -o-animation: waving 3s 2.2s ease-in-out infinite;
-  animation: waving 3s 2.2s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(7) {
-  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
-  -moz-animation: waving 3s 2.4s ease-in-out infinite;
-  -o-animation: waving 3s 2.4s ease-in-out infinite;
-  animation: waving 3s 2.4s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(8) {
-  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
-  -moz-animation: waving 3s 2.6s ease-in-out infinite;
-  -o-animation: waving 3s 2.6s ease-in-out infinite;
-  animation: waving 3s 2.6s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(9) {
-  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
-  -moz-animation: waving 3s 2.8s ease-in-out infinite;
-  -o-animation: waving 3s 2.8s ease-in-out infinite;
-  animation: waving 3s 2.8s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(10) {
-  -webkit-animation: waving 3s 3s ease-in-out infinite;
-  -moz-animation: waving 3s 3s ease-in-out infinite;
-  -o-animation: waving 3s 3s ease-in-out infinite;
-  animation: waving 3s 3s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(11) {
-  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
-  -moz-animation: waving 3s 3.2s ease-in-out infinite;
-  -o-animation: waving 3s 3.2s ease-in-out infinite;
-  animation: waving 3s 3.2s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(12) {
-  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
-  -moz-animation: waving 3s 3.4s ease-in-out infinite;
-  -o-animation: waving 3s 3.4s ease-in-out infinite;
-  animation: waving 3s 3.4s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(13) {
-  -webkit-animation: waving 3s 3.6s ease-in-out infinite;
-  -moz-animation: waving 3s 3.6s ease-in-out infinite;
-  -o-animation: waving 3s 3.6s ease-in-out infinite;
-  animation: waving 3s 3.6s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(14) {
-  -webkit-animation: waving 3s 3.8s ease-in-out infinite;
-  -moz-animation: waving 3s 3.8s ease-in-out infinite;
-  -o-animation: waving 3s 3.8s ease-in-out infinite;
-  animation: waving 3s 3.8s ease-in-out infinite;
-}
-.wave .row-10 > i:nth-child(15) {
-  -webkit-animation: waving 3s 4s ease-in-out infinite;
-  -moz-animation: waving 3s 4s ease-in-out infinite;
-  -o-animation: waving 3s 4s ease-in-out infinite;
-  animation: waving 3s 4s ease-in-out infinite;
-}
-.wave .row-11 {
+.particles .row-11 {
   -webkit-transform: translate3d(0, -550px, -550px);
   -moz-transform: translate3d(0, -550px, -550px);
-  -o-transform: translate3d(0, -550px, -550px);
   transform: translate3d(0, -550px, -550px);
 }
-.wave .row-11 > i:nth-child(1) {
-  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
-  -moz-animation: waving 3s 1.3s ease-in-out infinite;
-  -o-animation: waving 3s 1.3s ease-in-out infinite;
-  animation: waving 3s 1.3s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(2) {
-  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
-  -moz-animation: waving 3s 1.5s ease-in-out infinite;
-  -o-animation: waving 3s 1.5s ease-in-out infinite;
-  animation: waving 3s 1.5s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(3) {
-  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
-  -moz-animation: waving 3s 1.7s ease-in-out infinite;
-  -o-animation: waving 3s 1.7s ease-in-out infinite;
-  animation: waving 3s 1.7s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(4) {
-  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
-  -moz-animation: waving 3s 1.9s ease-in-out infinite;
-  -o-animation: waving 3s 1.9s ease-in-out infinite;
-  animation: waving 3s 1.9s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(5) {
-  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
-  -moz-animation: waving 3s 2.1s ease-in-out infinite;
-  -o-animation: waving 3s 2.1s ease-in-out infinite;
-  animation: waving 3s 2.1s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(6) {
-  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
-  -moz-animation: waving 3s 2.3s ease-in-out infinite;
-  -o-animation: waving 3s 2.3s ease-in-out infinite;
-  animation: waving 3s 2.3s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(7) {
-  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
-  -moz-animation: waving 3s 2.5s ease-in-out infinite;
-  -o-animation: waving 3s 2.5s ease-in-out infinite;
-  animation: waving 3s 2.5s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(8) {
-  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
-  -moz-animation: waving 3s 2.7s ease-in-out infinite;
-  -o-animation: waving 3s 2.7s ease-in-out infinite;
-  animation: waving 3s 2.7s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(9) {
-  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
-  -moz-animation: waving 3s 2.9s ease-in-out infinite;
-  -o-animation: waving 3s 2.9s ease-in-out infinite;
-  animation: waving 3s 2.9s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(10) {
-  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
-  -moz-animation: waving 3s 3.1s ease-in-out infinite;
-  -o-animation: waving 3s 3.1s ease-in-out infinite;
-  animation: waving 3s 3.1s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(11) {
-  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
-  -moz-animation: waving 3s 3.3s ease-in-out infinite;
-  -o-animation: waving 3s 3.3s ease-in-out infinite;
-  animation: waving 3s 3.3s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(12) {
-  -webkit-animation: waving 3s 3.5s ease-in-out infinite;
-  -moz-animation: waving 3s 3.5s ease-in-out infinite;
-  -o-animation: waving 3s 3.5s ease-in-out infinite;
-  animation: waving 3s 3.5s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(13) {
-  -webkit-animation: waving 3s 3.7s ease-in-out infinite;
-  -moz-animation: waving 3s 3.7s ease-in-out infinite;
-  -o-animation: waving 3s 3.7s ease-in-out infinite;
-  animation: waving 3s 3.7s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(14) {
-  -webkit-animation: waving 3s 3.9s ease-in-out infinite;
-  -moz-animation: waving 3s 3.9s ease-in-out infinite;
-  -o-animation: waving 3s 3.9s ease-in-out infinite;
-  animation: waving 3s 3.9s ease-in-out infinite;
-}
-.wave .row-11 > i:nth-child(15) {
-  -webkit-animation: waving 3s 4.1s ease-in-out infinite;
-  -moz-animation: waving 3s 4.1s ease-in-out infinite;
-  -o-animation: waving 3s 4.1s ease-in-out infinite;
-  animation: waving 3s 4.1s ease-in-out infinite;
-}
-.wave .row-12 {
+.particles .row-12 {
   -webkit-transform: translate3d(0, -600px, -600px);
   -moz-transform: translate3d(0, -600px, -600px);
-  -o-transform: translate3d(0, -600px, -600px);
   transform: translate3d(0, -600px, -600px);
 }
-.wave .row-12 > i:nth-child(1) {
-  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
-  -moz-animation: waving 3s 1.4s ease-in-out infinite;
-  -o-animation: waving 3s 1.4s ease-in-out infinite;
-  animation: waving 3s 1.4s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(2) {
-  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
-  -moz-animation: waving 3s 1.6s ease-in-out infinite;
-  -o-animation: waving 3s 1.6s ease-in-out infinite;
-  animation: waving 3s 1.6s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(3) {
-  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
-  -moz-animation: waving 3s 1.8s ease-in-out infinite;
-  -o-animation: waving 3s 1.8s ease-in-out infinite;
-  animation: waving 3s 1.8s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(4) {
-  -webkit-animation: waving 3s 2s ease-in-out infinite;
-  -moz-animation: waving 3s 2s ease-in-out infinite;
-  -o-animation: waving 3s 2s ease-in-out infinite;
-  animation: waving 3s 2s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(5) {
-  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
-  -moz-animation: waving 3s 2.2s ease-in-out infinite;
-  -o-animation: waving 3s 2.2s ease-in-out infinite;
-  animation: waving 3s 2.2s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(6) {
-  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
-  -moz-animation: waving 3s 2.4s ease-in-out infinite;
-  -o-animation: waving 3s 2.4s ease-in-out infinite;
-  animation: waving 3s 2.4s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(7) {
-  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
-  -moz-animation: waving 3s 2.6s ease-in-out infinite;
-  -o-animation: waving 3s 2.6s ease-in-out infinite;
-  animation: waving 3s 2.6s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(8) {
-  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
-  -moz-animation: waving 3s 2.8s ease-in-out infinite;
-  -o-animation: waving 3s 2.8s ease-in-out infinite;
-  animation: waving 3s 2.8s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(9) {
-  -webkit-animation: waving 3s 3s ease-in-out infinite;
-  -moz-animation: waving 3s 3s ease-in-out infinite;
-  -o-animation: waving 3s 3s ease-in-out infinite;
-  animation: waving 3s 3s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(10) {
-  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
-  -moz-animation: waving 3s 3.2s ease-in-out infinite;
-  -o-animation: waving 3s 3.2s ease-in-out infinite;
-  animation: waving 3s 3.2s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(11) {
-  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
-  -moz-animation: waving 3s 3.4s ease-in-out infinite;
-  -o-animation: waving 3s 3.4s ease-in-out infinite;
-  animation: waving 3s 3.4s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(12) {
-  -webkit-animation: waving 3s 3.6s ease-in-out infinite;
-  -moz-animation: waving 3s 3.6s ease-in-out infinite;
-  -o-animation: waving 3s 3.6s ease-in-out infinite;
-  animation: waving 3s 3.6s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(13) {
-  -webkit-animation: waving 3s 3.8s ease-in-out infinite;
-  -moz-animation: waving 3s 3.8s ease-in-out infinite;
-  -o-animation: waving 3s 3.8s ease-in-out infinite;
-  animation: waving 3s 3.8s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(14) {
-  -webkit-animation: waving 3s 4s ease-in-out infinite;
-  -moz-animation: waving 3s 4s ease-in-out infinite;
-  -o-animation: waving 3s 4s ease-in-out infinite;
-  animation: waving 3s 4s ease-in-out infinite;
-}
-.wave .row-12 > i:nth-child(15) {
-  -webkit-animation: waving 3s 4.2s ease-in-out infinite;
-  -moz-animation: waving 3s 4.2s ease-in-out infinite;
-  -o-animation: waving 3s 4.2s ease-in-out infinite;
-  animation: waving 3s 4.2s ease-in-out infinite;
-}
-.wave .row-13 {
+.particles .row-13 {
   -webkit-transform: translate3d(0, -650px, -650px);
   -moz-transform: translate3d(0, -650px, -650px);
-  -o-transform: translate3d(0, -650px, -650px);
   transform: translate3d(0, -650px, -650px);
 }
-.wave .row-13 > i:nth-child(1) {
-  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
-  -moz-animation: waving 3s 1.5s ease-in-out infinite;
-  -o-animation: waving 3s 1.5s ease-in-out infinite;
-  animation: waving 3s 1.5s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(2) {
-  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
-  -moz-animation: waving 3s 1.7s ease-in-out infinite;
-  -o-animation: waving 3s 1.7s ease-in-out infinite;
-  animation: waving 3s 1.7s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(3) {
-  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
-  -moz-animation: waving 3s 1.9s ease-in-out infinite;
-  -o-animation: waving 3s 1.9s ease-in-out infinite;
-  animation: waving 3s 1.9s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(4) {
-  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
-  -moz-animation: waving 3s 2.1s ease-in-out infinite;
-  -o-animation: waving 3s 2.1s ease-in-out infinite;
-  animation: waving 3s 2.1s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(5) {
-  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
-  -moz-animation: waving 3s 2.3s ease-in-out infinite;
-  -o-animation: waving 3s 2.3s ease-in-out infinite;
-  animation: waving 3s 2.3s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(6) {
-  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
-  -moz-animation: waving 3s 2.5s ease-in-out infinite;
-  -o-animation: waving 3s 2.5s ease-in-out infinite;
-  animation: waving 3s 2.5s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(7) {
-  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
-  -moz-animation: waving 3s 2.7s ease-in-out infinite;
-  -o-animation: waving 3s 2.7s ease-in-out infinite;
-  animation: waving 3s 2.7s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(8) {
-  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
-  -moz-animation: waving 3s 2.9s ease-in-out infinite;
-  -o-animation: waving 3s 2.9s ease-in-out infinite;
-  animation: waving 3s 2.9s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(9) {
-  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
-  -moz-animation: waving 3s 3.1s ease-in-out infinite;
-  -o-animation: waving 3s 3.1s ease-in-out infinite;
-  animation: waving 3s 3.1s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(10) {
-  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
-  -moz-animation: waving 3s 3.3s ease-in-out infinite;
-  -o-animation: waving 3s 3.3s ease-in-out infinite;
-  animation: waving 3s 3.3s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(11) {
-  -webkit-animation: waving 3s 3.5s ease-in-out infinite;
-  -moz-animation: waving 3s 3.5s ease-in-out infinite;
-  -o-animation: waving 3s 3.5s ease-in-out infinite;
-  animation: waving 3s 3.5s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(12) {
-  -webkit-animation: waving 3s 3.7s ease-in-out infinite;
-  -moz-animation: waving 3s 3.7s ease-in-out infinite;
-  -o-animation: waving 3s 3.7s ease-in-out infinite;
-  animation: waving 3s 3.7s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(13) {
-  -webkit-animation: waving 3s 3.9s ease-in-out infinite;
-  -moz-animation: waving 3s 3.9s ease-in-out infinite;
-  -o-animation: waving 3s 3.9s ease-in-out infinite;
-  animation: waving 3s 3.9s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(14) {
-  -webkit-animation: waving 3s 4.1s ease-in-out infinite;
-  -moz-animation: waving 3s 4.1s ease-in-out infinite;
-  -o-animation: waving 3s 4.1s ease-in-out infinite;
-  animation: waving 3s 4.1s ease-in-out infinite;
-}
-.wave .row-13 > i:nth-child(15) {
-  -webkit-animation: waving 3s 4.3s ease-in-out infinite;
-  -moz-animation: waving 3s 4.3s ease-in-out infinite;
-  -o-animation: waving 3s 4.3s ease-in-out infinite;
-  animation: waving 3s 4.3s ease-in-out infinite;
-}
-.wave .row-14 {
+.particles .row-14 {
   -webkit-transform: translate3d(0, -700px, -700px);
   -moz-transform: translate3d(0, -700px, -700px);
-  -o-transform: translate3d(0, -700px, -700px);
   transform: translate3d(0, -700px, -700px);
 }
-.wave .row-14 > i:nth-child(1) {
-  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
-  -moz-animation: waving 3s 1.6s ease-in-out infinite;
-  -o-animation: waving 3s 1.6s ease-in-out infinite;
-  animation: waving 3s 1.6s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(2) {
-  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
-  -moz-animation: waving 3s 1.8s ease-in-out infinite;
-  -o-animation: waving 3s 1.8s ease-in-out infinite;
-  animation: waving 3s 1.8s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(3) {
-  -webkit-animation: waving 3s 2s ease-in-out infinite;
-  -moz-animation: waving 3s 2s ease-in-out infinite;
-  -o-animation: waving 3s 2s ease-in-out infinite;
-  animation: waving 3s 2s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(4) {
-  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
-  -moz-animation: waving 3s 2.2s ease-in-out infinite;
-  -o-animation: waving 3s 2.2s ease-in-out infinite;
-  animation: waving 3s 2.2s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(5) {
-  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
-  -moz-animation: waving 3s 2.4s ease-in-out infinite;
-  -o-animation: waving 3s 2.4s ease-in-out infinite;
-  animation: waving 3s 2.4s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(6) {
-  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
-  -moz-animation: waving 3s 2.6s ease-in-out infinite;
-  -o-animation: waving 3s 2.6s ease-in-out infinite;
-  animation: waving 3s 2.6s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(7) {
-  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
-  -moz-animation: waving 3s 2.8s ease-in-out infinite;
-  -o-animation: waving 3s 2.8s ease-in-out infinite;
-  animation: waving 3s 2.8s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(8) {
-  -webkit-animation: waving 3s 3s ease-in-out infinite;
-  -moz-animation: waving 3s 3s ease-in-out infinite;
-  -o-animation: waving 3s 3s ease-in-out infinite;
-  animation: waving 3s 3s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(9) {
-  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
-  -moz-animation: waving 3s 3.2s ease-in-out infinite;
-  -o-animation: waving 3s 3.2s ease-in-out infinite;
-  animation: waving 3s 3.2s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(10) {
-  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
-  -moz-animation: waving 3s 3.4s ease-in-out infinite;
-  -o-animation: waving 3s 3.4s ease-in-out infinite;
-  animation: waving 3s 3.4s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(11) {
-  -webkit-animation: waving 3s 3.6s ease-in-out infinite;
-  -moz-animation: waving 3s 3.6s ease-in-out infinite;
-  -o-animation: waving 3s 3.6s ease-in-out infinite;
-  animation: waving 3s 3.6s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(12) {
-  -webkit-animation: waving 3s 3.8s ease-in-out infinite;
-  -moz-animation: waving 3s 3.8s ease-in-out infinite;
-  -o-animation: waving 3s 3.8s ease-in-out infinite;
-  animation: waving 3s 3.8s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(13) {
-  -webkit-animation: waving 3s 4s ease-in-out infinite;
-  -moz-animation: waving 3s 4s ease-in-out infinite;
-  -o-animation: waving 3s 4s ease-in-out infinite;
-  animation: waving 3s 4s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(14) {
-  -webkit-animation: waving 3s 4.2s ease-in-out infinite;
-  -moz-animation: waving 3s 4.2s ease-in-out infinite;
-  -o-animation: waving 3s 4.2s ease-in-out infinite;
-  animation: waving 3s 4.2s ease-in-out infinite;
-}
-.wave .row-14 > i:nth-child(15) {
-  -webkit-animation: waving 3s 4.4s ease-in-out infinite;
-  -moz-animation: waving 3s 4.4s ease-in-out infinite;
-  -o-animation: waving 3s 4.4s ease-in-out infinite;
-  animation: waving 3s 4.4s ease-in-out infinite;
-}
-.wave .row-15 {
+.particles .row-15 {
   -webkit-transform: translate3d(0, -750px, -750px);
   -moz-transform: translate3d(0, -750px, -750px);
-  -o-transform: translate3d(0, -750px, -750px);
   transform: translate3d(0, -750px, -750px);
 }
-.wave .row-15 > i:nth-child(1) {
+.particles.animate .row-1 > i:nth-child(1) {
+  -webkit-animation: waving 3s 0.3s ease-in-out infinite;
+  -moz-animation: waving 3s 0.3s ease-in-out infinite;
+  animation: waving 3s 0.3s ease-in-out infinite;
+}
+.particles.animate .row-1 > i:nth-child(2) {
+  -webkit-animation: waving 3s 0.5s ease-in-out infinite;
+  -moz-animation: waving 3s 0.5s ease-in-out infinite;
+  animation: waving 3s 0.5s ease-in-out infinite;
+}
+.particles.animate .row-1 > i:nth-child(3) {
+  -webkit-animation: waving 3s 0.7s ease-in-out infinite;
+  -moz-animation: waving 3s 0.7s ease-in-out infinite;
+  animation: waving 3s 0.7s ease-in-out infinite;
+}
+.particles.animate .row-1 > i:nth-child(4) {
+  -webkit-animation: waving 3s 0.9s ease-in-out infinite;
+  -moz-animation: waving 3s 0.9s ease-in-out infinite;
+  animation: waving 3s 0.9s ease-in-out infinite;
+}
+.particles.animate .row-1 > i:nth-child(5) {
+  -webkit-animation: waving 3s 1.1s ease-in-out infinite;
+  -moz-animation: waving 3s 1.1s ease-in-out infinite;
+  animation: waving 3s 1.1s ease-in-out infinite;
+}
+.particles.animate .row-1 > i:nth-child(6) {
+  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
+  -moz-animation: waving 3s 1.3s ease-in-out infinite;
+  animation: waving 3s 1.3s ease-in-out infinite;
+}
+.particles.animate .row-1 > i:nth-child(7) {
+  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
+  -moz-animation: waving 3s 1.5s ease-in-out infinite;
+  animation: waving 3s 1.5s ease-in-out infinite;
+}
+.particles.animate .row-1 > i:nth-child(8) {
   -webkit-animation: waving 3s 1.7s ease-in-out infinite;
   -moz-animation: waving 3s 1.7s ease-in-out infinite;
-  -o-animation: waving 3s 1.7s ease-in-out infinite;
   animation: waving 3s 1.7s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(2) {
+.particles.animate .row-1 > i:nth-child(9) {
   -webkit-animation: waving 3s 1.9s ease-in-out infinite;
   -moz-animation: waving 3s 1.9s ease-in-out infinite;
-  -o-animation: waving 3s 1.9s ease-in-out infinite;
   animation: waving 3s 1.9s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(3) {
+.particles.animate .row-1 > i:nth-child(10) {
   -webkit-animation: waving 3s 2.1s ease-in-out infinite;
   -moz-animation: waving 3s 2.1s ease-in-out infinite;
-  -o-animation: waving 3s 2.1s ease-in-out infinite;
   animation: waving 3s 2.1s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(4) {
+.particles.animate .row-1 > i:nth-child(11) {
   -webkit-animation: waving 3s 2.3s ease-in-out infinite;
   -moz-animation: waving 3s 2.3s ease-in-out infinite;
-  -o-animation: waving 3s 2.3s ease-in-out infinite;
   animation: waving 3s 2.3s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(5) {
+.particles.animate .row-1 > i:nth-child(12) {
   -webkit-animation: waving 3s 2.5s ease-in-out infinite;
   -moz-animation: waving 3s 2.5s ease-in-out infinite;
-  -o-animation: waving 3s 2.5s ease-in-out infinite;
   animation: waving 3s 2.5s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(6) {
+.particles.animate .row-1 > i:nth-child(13) {
   -webkit-animation: waving 3s 2.7s ease-in-out infinite;
   -moz-animation: waving 3s 2.7s ease-in-out infinite;
-  -o-animation: waving 3s 2.7s ease-in-out infinite;
   animation: waving 3s 2.7s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(7) {
+.particles.animate .row-1 > i:nth-child(14) {
   -webkit-animation: waving 3s 2.9s ease-in-out infinite;
   -moz-animation: waving 3s 2.9s ease-in-out infinite;
-  -o-animation: waving 3s 2.9s ease-in-out infinite;
   animation: waving 3s 2.9s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(8) {
+.particles.animate .row-1 > i:nth-child(15) {
   -webkit-animation: waving 3s 3.1s ease-in-out infinite;
   -moz-animation: waving 3s 3.1s ease-in-out infinite;
-  -o-animation: waving 3s 3.1s ease-in-out infinite;
   animation: waving 3s 3.1s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(9) {
+.particles.animate .row-2 > i:nth-child(1) {
+  -webkit-animation: waving 3s 0.4s ease-in-out infinite;
+  -moz-animation: waving 3s 0.4s ease-in-out infinite;
+  animation: waving 3s 0.4s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(2) {
+  -webkit-animation: waving 3s 0.6s ease-in-out infinite;
+  -moz-animation: waving 3s 0.6s ease-in-out infinite;
+  animation: waving 3s 0.6s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(3) {
+  -webkit-animation: waving 3s 0.8s ease-in-out infinite;
+  -moz-animation: waving 3s 0.8s ease-in-out infinite;
+  animation: waving 3s 0.8s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(4) {
+  -webkit-animation: waving 3s 1s ease-in-out infinite;
+  -moz-animation: waving 3s 1s ease-in-out infinite;
+  animation: waving 3s 1s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(5) {
+  -webkit-animation: waving 3s 1.2s ease-in-out infinite;
+  -moz-animation: waving 3s 1.2s ease-in-out infinite;
+  animation: waving 3s 1.2s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(6) {
+  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
+  -moz-animation: waving 3s 1.4s ease-in-out infinite;
+  animation: waving 3s 1.4s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(7) {
+  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
+  -moz-animation: waving 3s 1.6s ease-in-out infinite;
+  animation: waving 3s 1.6s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(8) {
+  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
+  -moz-animation: waving 3s 1.8s ease-in-out infinite;
+  animation: waving 3s 1.8s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(9) {
+  -webkit-animation: waving 3s 2s ease-in-out infinite;
+  -moz-animation: waving 3s 2s ease-in-out infinite;
+  animation: waving 3s 2s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(10) {
+  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
+  -moz-animation: waving 3s 2.2s ease-in-out infinite;
+  animation: waving 3s 2.2s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(11) {
+  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
+  -moz-animation: waving 3s 2.4s ease-in-out infinite;
+  animation: waving 3s 2.4s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(12) {
+  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
+  -moz-animation: waving 3s 2.6s ease-in-out infinite;
+  animation: waving 3s 2.6s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(13) {
+  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
+  -moz-animation: waving 3s 2.8s ease-in-out infinite;
+  animation: waving 3s 2.8s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(14) {
+  -webkit-animation: waving 3s 3.0s ease-in-out infinite;
+  -moz-animation: waving 3s 3.0s ease-in-out infinite;
+  animation: waving 3s 3.0s ease-in-out infinite;
+}
+.particles.animate .row-2 > i:nth-child(15) {
+  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
+  -moz-animation: waving 3s 3.2s ease-in-out infinite;
+  animation: waving 3s 3.2s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(1) {
+  -webkit-animation: waving 3s 0.5s ease-in-out infinite;
+  -moz-animation: waving 3s 0.5s ease-in-out infinite;
+  animation: waving 3s 0.5s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(2) {
+  -webkit-animation: waving 3s 0.7s ease-in-out infinite;
+  -moz-animation: waving 3s 0.7s ease-in-out infinite;
+  animation: waving 3s 0.7s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(3) {
+  -webkit-animation: waving 3s 0.9s ease-in-out infinite;
+  -moz-animation: waving 3s 0.9s ease-in-out infinite;
+  animation: waving 3s 0.9s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(4) {
+  -webkit-animation: waving 3s 1.1s ease-in-out infinite;
+  -moz-animation: waving 3s 1.1s ease-in-out infinite;
+  animation: waving 3s 1.1s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(5) {
+  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
+  -moz-animation: waving 3s 1.3s ease-in-out infinite;
+  animation: waving 3s 1.3s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(6) {
+  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
+  -moz-animation: waving 3s 1.5s ease-in-out infinite;
+  animation: waving 3s 1.5s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(7) {
+  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
+  -moz-animation: waving 3s 1.7s ease-in-out infinite;
+  animation: waving 3s 1.7s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(8) {
+  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
+  -moz-animation: waving 3s 1.9s ease-in-out infinite;
+  animation: waving 3s 1.9s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(9) {
+  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
+  -moz-animation: waving 3s 2.1s ease-in-out infinite;
+  animation: waving 3s 2.1s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(10) {
+  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
+  -moz-animation: waving 3s 2.3s ease-in-out infinite;
+  animation: waving 3s 2.3s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(11) {
+  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
+  -moz-animation: waving 3s 2.5s ease-in-out infinite;
+  animation: waving 3s 2.5s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(12) {
+  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
+  -moz-animation: waving 3s 2.7s ease-in-out infinite;
+  animation: waving 3s 2.7s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(13) {
+  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
+  -moz-animation: waving 3s 2.9s ease-in-out infinite;
+  animation: waving 3s 2.9s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(14) {
+  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
+  -moz-animation: waving 3s 3.1s ease-in-out infinite;
+  animation: waving 3s 3.1s ease-in-out infinite;
+}
+.particles.animate .row-3 > i:nth-child(15) {
   -webkit-animation: waving 3s 3.3s ease-in-out infinite;
   -moz-animation: waving 3s 3.3s ease-in-out infinite;
-  -o-animation: waving 3s 3.3s ease-in-out infinite;
   animation: waving 3s 3.3s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(10) {
+.particles.animate .row-4 > i:nth-child(1) {
+  -webkit-animation: waving 3s 0.6s ease-in-out infinite;
+  -moz-animation: waving 3s 0.6s ease-in-out infinite;
+  animation: waving 3s 0.6s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(2) {
+  -webkit-animation: waving 3s 0.8s ease-in-out infinite;
+  -moz-animation: waving 3s 0.8s ease-in-out infinite;
+  animation: waving 3s 0.8s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(3) {
+  -webkit-animation: waving 3s 1s ease-in-out infinite;
+  -moz-animation: waving 3s 1s ease-in-out infinite;
+  animation: waving 3s 1s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(4) {
+  -webkit-animation: waving 3s 1.2s ease-in-out infinite;
+  -moz-animation: waving 3s 1.2s ease-in-out infinite;
+  animation: waving 3s 1.2s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(5) {
+  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
+  -moz-animation: waving 3s 1.4s ease-in-out infinite;
+  animation: waving 3s 1.4s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(6) {
+  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
+  -moz-animation: waving 3s 1.6s ease-in-out infinite;
+  animation: waving 3s 1.6s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(7) {
+  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
+  -moz-animation: waving 3s 1.8s ease-in-out infinite;
+  animation: waving 3s 1.8s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(8) {
+  -webkit-animation: waving 3s 2s ease-in-out infinite;
+  -moz-animation: waving 3s 2s ease-in-out infinite;
+  animation: waving 3s 2s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(9) {
+  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
+  -moz-animation: waving 3s 2.2s ease-in-out infinite;
+  animation: waving 3s 2.2s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(10) {
+  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
+  -moz-animation: waving 3s 2.4s ease-in-out infinite;
+  animation: waving 3s 2.4s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(11) {
+  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
+  -moz-animation: waving 3s 2.6s ease-in-out infinite;
+  animation: waving 3s 2.6s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(12) {
+  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
+  -moz-animation: waving 3s 2.8s ease-in-out infinite;
+  animation: waving 3s 2.8s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(13) {
+  -webkit-animation: waving 3s 3s ease-in-out infinite;
+  -moz-animation: waving 3s 3s ease-in-out infinite;
+  animation: waving 3s 3s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(14) {
+  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
+  -moz-animation: waving 3s 3.2s ease-in-out infinite;
+  animation: waving 3s 3.2s ease-in-out infinite;
+}
+.particles.animate .row-4 > i:nth-child(15) {
+  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
+  -moz-animation: waving 3s 3.4s ease-in-out infinite;
+  animation: waving 3s 3.4s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(1) {
+  -webkit-animation: waving 3s 0.7s ease-in-out infinite;
+  -moz-animation: waving 3s 0.7s ease-in-out infinite;
+  animation: waving 3s 0.7s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(2) {
+  -webkit-animation: waving 3s 0.9s ease-in-out infinite;
+  -moz-animation: waving 3s 0.9s ease-in-out infinite;
+  animation: waving 3s 0.9s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(3) {
+  -webkit-animation: waving 3s 1.1s ease-in-out infinite;
+  -moz-animation: waving 3s 1.1s ease-in-out infinite;
+  animation: waving 3s 1.1s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(4) {
+  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
+  -moz-animation: waving 3s 1.3s ease-in-out infinite;
+  animation: waving 3s 1.3s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(5) {
+  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
+  -moz-animation: waving 3s 1.5s ease-in-out infinite;
+  animation: waving 3s 1.5s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(6) {
+  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
+  -moz-animation: waving 3s 1.7s ease-in-out infinite;
+  animation: waving 3s 1.7s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(7) {
+  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
+  -moz-animation: waving 3s 1.9s ease-in-out infinite;
+  animation: waving 3s 1.9s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(8) {
+  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
+  -moz-animation: waving 3s 2.1s ease-in-out infinite;
+  animation: waving 3s 2.1s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(9) {
+  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
+  -moz-animation: waving 3s 2.3s ease-in-out infinite;
+  animation: waving 3s 2.3s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(10) {
+  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
+  -moz-animation: waving 3s 2.5s ease-in-out infinite;
+  animation: waving 3s 2.5s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(11) {
+  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
+  -moz-animation: waving 3s 2.7s ease-in-out infinite;
+  animation: waving 3s 2.7s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(12) {
+  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
+  -moz-animation: waving 3s 2.9s ease-in-out infinite;
+  animation: waving 3s 2.9s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(13) {
+  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
+  -moz-animation: waving 3s 3.1s ease-in-out infinite;
+  animation: waving 3s 3.1s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(14) {
+  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
+  -moz-animation: waving 3s 3.3s ease-in-out infinite;
+  animation: waving 3s 3.3s ease-in-out infinite;
+}
+.particles.animate .row-5 > i:nth-child(15) {
   -webkit-animation: waving 3s 3.5s ease-in-out infinite;
   -moz-animation: waving 3s 3.5s ease-in-out infinite;
-  -o-animation: waving 3s 3.5s ease-in-out infinite;
   animation: waving 3s 3.5s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(11) {
+.particles.animate .row-6 > i:nth-child(1) {
+  -webkit-animation: waving 3s 0.8s ease-in-out infinite;
+  -moz-animation: waving 3s 0.8s ease-in-out infinite;
+  animation: waving 3s 0.8s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(2) {
+  -webkit-animation: waving 3s 1s ease-in-out infinite;
+  -moz-animation: waving 3s 1s ease-in-out infinite;
+  animation: waving 3s 1s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(3) {
+  -webkit-animation: waving 3s 1.2s ease-in-out infinite;
+  -moz-animation: waving 3s 1.2s ease-in-out infinite;
+  animation: waving 3s 1.2s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(4) {
+  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
+  -moz-animation: waving 3s 1.4s ease-in-out infinite;
+  animation: waving 3s 1.4s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(5) {
+  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
+  -moz-animation: waving 3s 1.6s ease-in-out infinite;
+  animation: waving 3s 1.6s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(6) {
+  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
+  -moz-animation: waving 3s 1.8s ease-in-out infinite;
+  animation: waving 3s 1.8s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(7) {
+  -webkit-animation: waving 3s 2s ease-in-out infinite;
+  -moz-animation: waving 3s 2s ease-in-out infinite;
+  animation: waving 3s 2s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(8) {
+  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
+  -moz-animation: waving 3s 2.2s ease-in-out infinite;
+  animation: waving 3s 2.2s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(9) {
+  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
+  -moz-animation: waving 3s 2.4s ease-in-out infinite;
+  animation: waving 3s 2.4s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(10) {
+  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
+  -moz-animation: waving 3s 2.6s ease-in-out infinite;
+  animation: waving 3s 2.6s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(11) {
+  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
+  -moz-animation: waving 3s 2.8s ease-in-out infinite;
+  animation: waving 3s 2.8s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(12) {
+  -webkit-animation: waving 3s 3.0s ease-in-out infinite;
+  -moz-animation: waving 3s 3.0s ease-in-out infinite;
+  animation: waving 3s 3.0s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(13) {
+  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
+  -moz-animation: waving 3s 3.2s ease-in-out infinite;
+  animation: waving 3s 3.2s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(14) {
+  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
+  -moz-animation: waving 3s 3.4s ease-in-out infinite;
+  animation: waving 3s 3.4s ease-in-out infinite;
+}
+.particles.animate .row-6 > i:nth-child(15) {
+  -webkit-animation: waving 3s 3.6s ease-in-out infinite;
+  -moz-animation: waving 3s 3.6s ease-in-out infinite;
+  animation: waving 3s 3.6s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(1) {
+  -webkit-animation: waving 3s 0.9s ease-in-out infinite;
+  -moz-animation: waving 3s 0.9s ease-in-out infinite;
+  animation: waving 3s 0.9s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(2) {
+  -webkit-animation: waving 3s 1.1s ease-in-out infinite;
+  -moz-animation: waving 3s 1.1s ease-in-out infinite;
+  animation: waving 3s 1.1s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(3) {
+  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
+  -moz-animation: waving 3s 1.3s ease-in-out infinite;
+  animation: waving 3s 1.3s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(4) {
+  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
+  -moz-animation: waving 3s 1.5s ease-in-out infinite;
+  animation: waving 3s 1.5s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(5) {
+  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
+  -moz-animation: waving 3s 1.7s ease-in-out infinite;
+  animation: waving 3s 1.7s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(6) {
+  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
+  -moz-animation: waving 3s 1.9s ease-in-out infinite;
+  animation: waving 3s 1.9s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(7) {
+  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
+  -moz-animation: waving 3s 2.1s ease-in-out infinite;
+  animation: waving 3s 2.1s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(8) {
+  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
+  -moz-animation: waving 3s 2.3s ease-in-out infinite;
+  animation: waving 3s 2.3s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(9) {
+  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
+  -moz-animation: waving 3s 2.5s ease-in-out infinite;
+  animation: waving 3s 2.5s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(10) {
+  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
+  -moz-animation: waving 3s 2.7s ease-in-out infinite;
+  animation: waving 3s 2.7s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(11) {
+  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
+  -moz-animation: waving 3s 2.9s ease-in-out infinite;
+  animation: waving 3s 2.9s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(12) {
+  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
+  -moz-animation: waving 3s 3.1s ease-in-out infinite;
+  animation: waving 3s 3.1s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(13) {
+  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
+  -moz-animation: waving 3s 3.3s ease-in-out infinite;
+  animation: waving 3s 3.3s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(14) {
+  -webkit-animation: waving 3s 3.5s ease-in-out infinite;
+  -moz-animation: waving 3s 3.5s ease-in-out infinite;
+  animation: waving 3s 3.5s ease-in-out infinite;
+}
+.particles.animate .row-7 > i:nth-child(15) {
   -webkit-animation: waving 3s 3.7s ease-in-out infinite;
   -moz-animation: waving 3s 3.7s ease-in-out infinite;
-  -o-animation: waving 3s 3.7s ease-in-out infinite;
   animation: waving 3s 3.7s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(12) {
+.particles.animate .row-8 > i:nth-child(1) {
+  -webkit-animation: waving 3s 1s ease-in-out infinite;
+  -moz-animation: waving 3s 1s ease-in-out infinite;
+  animation: waving 3s 1s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(2) {
+  -webkit-animation: waving 3s 1.2s ease-in-out infinite;
+  -moz-animation: waving 3s 1.2s ease-in-out infinite;
+  animation: waving 3s 1.2s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(3) {
+  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
+  -moz-animation: waving 3s 1.4s ease-in-out infinite;
+  animation: waving 3s 1.4s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(4) {
+  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
+  -moz-animation: waving 3s 1.6s ease-in-out infinite;
+  animation: waving 3s 1.6s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(5) {
+  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
+  -moz-animation: waving 3s 1.8s ease-in-out infinite;
+  animation: waving 3s 1.8s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(6) {
+  -webkit-animation: waving 3s 2s ease-in-out infinite;
+  -moz-animation: waving 3s 2s ease-in-out infinite;
+  animation: waving 3s 2s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(7) {
+  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
+  -moz-animation: waving 3s 2.2s ease-in-out infinite;
+  animation: waving 3s 2.2s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(8) {
+  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
+  -moz-animation: waving 3s 2.4s ease-in-out infinite;
+  animation: waving 3s 2.4s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(9) {
+  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
+  -moz-animation: waving 3s 2.6s ease-in-out infinite;
+  animation: waving 3s 2.6s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(10) {
+  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
+  -moz-animation: waving 3s 2.8s ease-in-out infinite;
+  animation: waving 3s 2.8s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(11) {
+  -webkit-animation: waving 3s 3s ease-in-out infinite;
+  -moz-animation: waving 3s 3s ease-in-out infinite;
+  animation: waving 3s 3s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(12) {
+  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
+  -moz-animation: waving 3s 3.2s ease-in-out infinite;
+  animation: waving 3s 3.2s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(13) {
+  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
+  -moz-animation: waving 3s 3.4s ease-in-out infinite;
+  animation: waving 3s 3.4s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(14) {
+  -webkit-animation: waving 3s 3.6s ease-in-out infinite;
+  -moz-animation: waving 3s 3.6s ease-in-out infinite;
+  animation: waving 3s 3.6s ease-in-out infinite;
+}
+.particles.animate .row-8 > i:nth-child(15) {
+  -webkit-animation: waving 3s 3.8s ease-in-out infinite;
+  -moz-animation: waving 3s 3.8s ease-in-out infinite;
+  animation: waving 3s 3.8s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(1) {
+  -webkit-animation: waving 3s 1.1s ease-in-out infinite;
+  -moz-animation: waving 3s 1.1s ease-in-out infinite;
+  animation: waving 3s 1.1s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(2) {
+  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
+  -moz-animation: waving 3s 1.3s ease-in-out infinite;
+  animation: waving 3s 1.3s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(3) {
+  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
+  -moz-animation: waving 3s 1.5s ease-in-out infinite;
+  animation: waving 3s 1.5s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(4) {
+  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
+  -moz-animation: waving 3s 1.7s ease-in-out infinite;
+  animation: waving 3s 1.7s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(5) {
+  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
+  -moz-animation: waving 3s 1.9s ease-in-out infinite;
+  animation: waving 3s 1.9s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(6) {
+  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
+  -moz-animation: waving 3s 2.1s ease-in-out infinite;
+  animation: waving 3s 2.1s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(7) {
+  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
+  -moz-animation: waving 3s 2.3s ease-in-out infinite;
+  animation: waving 3s 2.3s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(8) {
+  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
+  -moz-animation: waving 3s 2.5s ease-in-out infinite;
+  animation: waving 3s 2.5s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(9) {
+  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
+  -moz-animation: waving 3s 2.7s ease-in-out infinite;
+  animation: waving 3s 2.7s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(10) {
+  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
+  -moz-animation: waving 3s 2.9s ease-in-out infinite;
+  animation: waving 3s 2.9s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(11) {
+  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
+  -moz-animation: waving 3s 3.1s ease-in-out infinite;
+  animation: waving 3s 3.1s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(12) {
+  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
+  -moz-animation: waving 3s 3.3s ease-in-out infinite;
+  animation: waving 3s 3.3s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(13) {
+  -webkit-animation: waving 3s 3.5s ease-in-out infinite;
+  -moz-animation: waving 3s 3.5s ease-in-out infinite;
+  animation: waving 3s 3.5s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(14) {
+  -webkit-animation: waving 3s 3.7s ease-in-out infinite;
+  -moz-animation: waving 3s 3.7s ease-in-out infinite;
+  animation: waving 3s 3.7s ease-in-out infinite;
+}
+.particles.animate .row-9 > i:nth-child(15) {
   -webkit-animation: waving 3s 3.9s ease-in-out infinite;
   -moz-animation: waving 3s 3.9s ease-in-out infinite;
-  -o-animation: waving 3s 3.9s ease-in-out infinite;
   animation: waving 3s 3.9s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(13) {
+.particles.animate .row-10 > i:nth-child(1) {
+  -webkit-animation: waving 3s 1.2s ease-in-out infinite;
+  -moz-animation: waving 3s 1.2s ease-in-out infinite;
+  animation: waving 3s 1.2s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(2) {
+  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
+  -moz-animation: waving 3s 1.4s ease-in-out infinite;
+  animation: waving 3s 1.4s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(3) {
+  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
+  -moz-animation: waving 3s 1.6s ease-in-out infinite;
+  animation: waving 3s 1.6s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(4) {
+  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
+  -moz-animation: waving 3s 1.8s ease-in-out infinite;
+  animation: waving 3s 1.8s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(5) {
+  -webkit-animation: waving 3s 2s ease-in-out infinite;
+  -moz-animation: waving 3s 2s ease-in-out infinite;
+  animation: waving 3s 2s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(6) {
+  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
+  -moz-animation: waving 3s 2.2s ease-in-out infinite;
+  animation: waving 3s 2.2s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(7) {
+  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
+  -moz-animation: waving 3s 2.4s ease-in-out infinite;
+  animation: waving 3s 2.4s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(8) {
+  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
+  -moz-animation: waving 3s 2.6s ease-in-out infinite;
+  animation: waving 3s 2.6s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(9) {
+  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
+  -moz-animation: waving 3s 2.8s ease-in-out infinite;
+  animation: waving 3s 2.8s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(10) {
+  -webkit-animation: waving 3s 3s ease-in-out infinite;
+  -moz-animation: waving 3s 3s ease-in-out infinite;
+  animation: waving 3s 3s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(11) {
+  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
+  -moz-animation: waving 3s 3.2s ease-in-out infinite;
+  animation: waving 3s 3.2s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(12) {
+  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
+  -moz-animation: waving 3s 3.4s ease-in-out infinite;
+  animation: waving 3s 3.4s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(13) {
+  -webkit-animation: waving 3s 3.6s ease-in-out infinite;
+  -moz-animation: waving 3s 3.6s ease-in-out infinite;
+  animation: waving 3s 3.6s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(14) {
+  -webkit-animation: waving 3s 3.8s ease-in-out infinite;
+  -moz-animation: waving 3s 3.8s ease-in-out infinite;
+  animation: waving 3s 3.8s ease-in-out infinite;
+}
+.particles.animate .row-10 > i:nth-child(15) {
+  -webkit-animation: waving 3s 4s ease-in-out infinite;
+  -moz-animation: waving 3s 4s ease-in-out infinite;
+  animation: waving 3s 4s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(1) {
+  -webkit-animation: waving 3s 1.3s ease-in-out infinite;
+  -moz-animation: waving 3s 1.3s ease-in-out infinite;
+  animation: waving 3s 1.3s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(2) {
+  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
+  -moz-animation: waving 3s 1.5s ease-in-out infinite;
+  animation: waving 3s 1.5s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(3) {
+  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
+  -moz-animation: waving 3s 1.7s ease-in-out infinite;
+  animation: waving 3s 1.7s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(4) {
+  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
+  -moz-animation: waving 3s 1.9s ease-in-out infinite;
+  animation: waving 3s 1.9s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(5) {
+  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
+  -moz-animation: waving 3s 2.1s ease-in-out infinite;
+  animation: waving 3s 2.1s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(6) {
+  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
+  -moz-animation: waving 3s 2.3s ease-in-out infinite;
+  animation: waving 3s 2.3s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(7) {
+  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
+  -moz-animation: waving 3s 2.5s ease-in-out infinite;
+  animation: waving 3s 2.5s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(8) {
+  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
+  -moz-animation: waving 3s 2.7s ease-in-out infinite;
+  animation: waving 3s 2.7s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(9) {
+  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
+  -moz-animation: waving 3s 2.9s ease-in-out infinite;
+  animation: waving 3s 2.9s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(10) {
+  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
+  -moz-animation: waving 3s 3.1s ease-in-out infinite;
+  animation: waving 3s 3.1s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(11) {
+  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
+  -moz-animation: waving 3s 3.3s ease-in-out infinite;
+  animation: waving 3s 3.3s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(12) {
+  -webkit-animation: waving 3s 3.5s ease-in-out infinite;
+  -moz-animation: waving 3s 3.5s ease-in-out infinite;
+  animation: waving 3s 3.5s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(13) {
+  -webkit-animation: waving 3s 3.7s ease-in-out infinite;
+  -moz-animation: waving 3s 3.7s ease-in-out infinite;
+  animation: waving 3s 3.7s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(14) {
+  -webkit-animation: waving 3s 3.9s ease-in-out infinite;
+  -moz-animation: waving 3s 3.9s ease-in-out infinite;
+  animation: waving 3s 3.9s ease-in-out infinite;
+}
+.particles.animate .row-11 > i:nth-child(15) {
   -webkit-animation: waving 3s 4.1s ease-in-out infinite;
   -moz-animation: waving 3s 4.1s ease-in-out infinite;
-  -o-animation: waving 3s 4.1s ease-in-out infinite;
   animation: waving 3s 4.1s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(14) {
+.particles.animate .row-12 > i:nth-child(1) {
+  -webkit-animation: waving 3s 1.4s ease-in-out infinite;
+  -moz-animation: waving 3s 1.4s ease-in-out infinite;
+  animation: waving 3s 1.4s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(2) {
+  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
+  -moz-animation: waving 3s 1.6s ease-in-out infinite;
+  animation: waving 3s 1.6s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(3) {
+  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
+  -moz-animation: waving 3s 1.8s ease-in-out infinite;
+  animation: waving 3s 1.8s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(4) {
+  -webkit-animation: waving 3s 2s ease-in-out infinite;
+  -moz-animation: waving 3s 2s ease-in-out infinite;
+  animation: waving 3s 2s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(5) {
+  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
+  -moz-animation: waving 3s 2.2s ease-in-out infinite;
+  animation: waving 3s 2.2s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(6) {
+  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
+  -moz-animation: waving 3s 2.4s ease-in-out infinite;
+  animation: waving 3s 2.4s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(7) {
+  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
+  -moz-animation: waving 3s 2.6s ease-in-out infinite;
+  animation: waving 3s 2.6s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(8) {
+  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
+  -moz-animation: waving 3s 2.8s ease-in-out infinite;
+  animation: waving 3s 2.8s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(9) {
+  -webkit-animation: waving 3s 3s ease-in-out infinite;
+  -moz-animation: waving 3s 3s ease-in-out infinite;
+  animation: waving 3s 3s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(10) {
+  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
+  -moz-animation: waving 3s 3.2s ease-in-out infinite;
+  animation: waving 3s 3.2s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(11) {
+  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
+  -moz-animation: waving 3s 3.4s ease-in-out infinite;
+  animation: waving 3s 3.4s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(12) {
+  -webkit-animation: waving 3s 3.6s ease-in-out infinite;
+  -moz-animation: waving 3s 3.6s ease-in-out infinite;
+  animation: waving 3s 3.6s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(13) {
+  -webkit-animation: waving 3s 3.8s ease-in-out infinite;
+  -moz-animation: waving 3s 3.8s ease-in-out infinite;
+  animation: waving 3s 3.8s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(14) {
+  -webkit-animation: waving 3s 4s ease-in-out infinite;
+  -moz-animation: waving 3s 4s ease-in-out infinite;
+  animation: waving 3s 4s ease-in-out infinite;
+}
+.particles.animate .row-12 > i:nth-child(15) {
+  -webkit-animation: waving 3s 4.2s ease-in-out infinite;
+  -moz-animation: waving 3s 4.2s ease-in-out infinite;
+  animation: waving 3s 4.2s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(1) {
+  -webkit-animation: waving 3s 1.5s ease-in-out infinite;
+  -moz-animation: waving 3s 1.5s ease-in-out infinite;
+  animation: waving 3s 1.5s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(2) {
+  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
+  -moz-animation: waving 3s 1.7s ease-in-out infinite;
+  animation: waving 3s 1.7s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(3) {
+  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
+  -moz-animation: waving 3s 1.9s ease-in-out infinite;
+  animation: waving 3s 1.9s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(4) {
+  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
+  -moz-animation: waving 3s 2.1s ease-in-out infinite;
+  animation: waving 3s 2.1s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(5) {
+  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
+  -moz-animation: waving 3s 2.3s ease-in-out infinite;
+  animation: waving 3s 2.3s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(6) {
+  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
+  -moz-animation: waving 3s 2.5s ease-in-out infinite;
+  animation: waving 3s 2.5s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(7) {
+  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
+  -moz-animation: waving 3s 2.7s ease-in-out infinite;
+  animation: waving 3s 2.7s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(8) {
+  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
+  -moz-animation: waving 3s 2.9s ease-in-out infinite;
+  animation: waving 3s 2.9s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(9) {
+  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
+  -moz-animation: waving 3s 3.1s ease-in-out infinite;
+  animation: waving 3s 3.1s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(10) {
+  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
+  -moz-animation: waving 3s 3.3s ease-in-out infinite;
+  animation: waving 3s 3.3s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(11) {
+  -webkit-animation: waving 3s 3.5s ease-in-out infinite;
+  -moz-animation: waving 3s 3.5s ease-in-out infinite;
+  animation: waving 3s 3.5s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(12) {
+  -webkit-animation: waving 3s 3.7s ease-in-out infinite;
+  -moz-animation: waving 3s 3.7s ease-in-out infinite;
+  animation: waving 3s 3.7s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(13) {
+  -webkit-animation: waving 3s 3.9s ease-in-out infinite;
+  -moz-animation: waving 3s 3.9s ease-in-out infinite;
+  animation: waving 3s 3.9s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(14) {
+  -webkit-animation: waving 3s 4.1s ease-in-out infinite;
+  -moz-animation: waving 3s 4.1s ease-in-out infinite;
+  animation: waving 3s 4.1s ease-in-out infinite;
+}
+.particles.animate .row-13 > i:nth-child(15) {
   -webkit-animation: waving 3s 4.3s ease-in-out infinite;
   -moz-animation: waving 3s 4.3s ease-in-out infinite;
-  -o-animation: waving 3s 4.3s ease-in-out infinite;
   animation: waving 3s 4.3s ease-in-out infinite;
 }
-.wave .row-15 > i:nth-child(15) {
+.particles.animate .row-14 > i:nth-child(1) {
+  -webkit-animation: waving 3s 1.6s ease-in-out infinite;
+  -moz-animation: waving 3s 1.6s ease-in-out infinite;
+  animation: waving 3s 1.6s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(2) {
+  -webkit-animation: waving 3s 1.8s ease-in-out infinite;
+  -moz-animation: waving 3s 1.8s ease-in-out infinite;
+  animation: waving 3s 1.8s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(3) {
+  -webkit-animation: waving 3s 2s ease-in-out infinite;
+  -moz-animation: waving 3s 2s ease-in-out infinite;
+  animation: waving 3s 2s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(4) {
+  -webkit-animation: waving 3s 2.2s ease-in-out infinite;
+  -moz-animation: waving 3s 2.2s ease-in-out infinite;
+  animation: waving 3s 2.2s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(5) {
+  -webkit-animation: waving 3s 2.4s ease-in-out infinite;
+  -moz-animation: waving 3s 2.4s ease-in-out infinite;
+  animation: waving 3s 2.4s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(6) {
+  -webkit-animation: waving 3s 2.6s ease-in-out infinite;
+  -moz-animation: waving 3s 2.6s ease-in-out infinite;
+  animation: waving 3s 2.6s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(7) {
+  -webkit-animation: waving 3s 2.8s ease-in-out infinite;
+  -moz-animation: waving 3s 2.8s ease-in-out infinite;
+  animation: waving 3s 2.8s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(8) {
+  -webkit-animation: waving 3s 3s ease-in-out infinite;
+  -moz-animation: waving 3s 3s ease-in-out infinite;
+  animation: waving 3s 3s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(9) {
+  -webkit-animation: waving 3s 3.2s ease-in-out infinite;
+  -moz-animation: waving 3s 3.2s ease-in-out infinite;
+  animation: waving 3s 3.2s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(10) {
+  -webkit-animation: waving 3s 3.4s ease-in-out infinite;
+  -moz-animation: waving 3s 3.4s ease-in-out infinite;
+  animation: waving 3s 3.4s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(11) {
+  -webkit-animation: waving 3s 3.6s ease-in-out infinite;
+  -moz-animation: waving 3s 3.6s ease-in-out infinite;
+  animation: waving 3s 3.6s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(12) {
+  -webkit-animation: waving 3s 3.8s ease-in-out infinite;
+  -moz-animation: waving 3s 3.8s ease-in-out infinite;
+  animation: waving 3s 3.8s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(13) {
+  -webkit-animation: waving 3s 4s ease-in-out infinite;
+  -moz-animation: waving 3s 4s ease-in-out infinite;
+  animation: waving 3s 4s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(14) {
+  -webkit-animation: waving 3s 4.2s ease-in-out infinite;
+  -moz-animation: waving 3s 4.2s ease-in-out infinite;
+  animation: waving 3s 4.2s ease-in-out infinite;
+}
+.particles.animate .row-14 > i:nth-child(15) {
+  -webkit-animation: waving 3s 4.4s ease-in-out infinite;
+  -moz-animation: waving 3s 4.4s ease-in-out infinite;
+  animation: waving 3s 4.4s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(1) {
+  -webkit-animation: waving 3s 1.7s ease-in-out infinite;
+  -moz-animation: waving 3s 1.7s ease-in-out infinite;
+  animation: waving 3s 1.7s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(2) {
+  -webkit-animation: waving 3s 1.9s ease-in-out infinite;
+  -moz-animation: waving 3s 1.9s ease-in-out infinite;
+  animation: waving 3s 1.9s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(3) {
+  -webkit-animation: waving 3s 2.1s ease-in-out infinite;
+  -moz-animation: waving 3s 2.1s ease-in-out infinite;
+  animation: waving 3s 2.1s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(4) {
+  -webkit-animation: waving 3s 2.3s ease-in-out infinite;
+  -moz-animation: waving 3s 2.3s ease-in-out infinite;
+  animation: waving 3s 2.3s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(5) {
+  -webkit-animation: waving 3s 2.5s ease-in-out infinite;
+  -moz-animation: waving 3s 2.5s ease-in-out infinite;
+  animation: waving 3s 2.5s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(6) {
+  -webkit-animation: waving 3s 2.7s ease-in-out infinite;
+  -moz-animation: waving 3s 2.7s ease-in-out infinite;
+  animation: waving 3s 2.7s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(7) {
+  -webkit-animation: waving 3s 2.9s ease-in-out infinite;
+  -moz-animation: waving 3s 2.9s ease-in-out infinite;
+  animation: waving 3s 2.9s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(8) {
+  -webkit-animation: waving 3s 3.1s ease-in-out infinite;
+  -moz-animation: waving 3s 3.1s ease-in-out infinite;
+  animation: waving 3s 3.1s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(9) {
+  -webkit-animation: waving 3s 3.3s ease-in-out infinite;
+  -moz-animation: waving 3s 3.3s ease-in-out infinite;
+  animation: waving 3s 3.3s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(10) {
+  -webkit-animation: waving 3s 3.5s ease-in-out infinite;
+  -moz-animation: waving 3s 3.5s ease-in-out infinite;
+  animation: waving 3s 3.5s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(11) {
+  -webkit-animation: waving 3s 3.7s ease-in-out infinite;
+  -moz-animation: waving 3s 3.7s ease-in-out infinite;
+  animation: waving 3s 3.7s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(12) {
+  -webkit-animation: waving 3s 3.9s ease-in-out infinite;
+  -moz-animation: waving 3s 3.9s ease-in-out infinite;
+  animation: waving 3s 3.9s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(13) {
+  -webkit-animation: waving 3s 4.1s ease-in-out infinite;
+  -moz-animation: waving 3s 4.1s ease-in-out infinite;
+  animation: waving 3s 4.1s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(14) {
+  -webkit-animation: waving 3s 4.3s ease-in-out infinite;
+  -moz-animation: waving 3s 4.3s ease-in-out infinite;
+  animation: waving 3s 4.3s ease-in-out infinite;
+}
+.particles.animate .row-15 > i:nth-child(15) {
   -webkit-animation: waving 3s 4.5s ease-in-out infinite;
   -moz-animation: waving 3s 4.5s ease-in-out infinite;
-  -o-animation: waving 3s 4.5s ease-in-out infinite;
   animation: waving 3s 4.5s ease-in-out infinite;
 }
-.wave i {
+.particles i {
   display: inline-block;
   margin: 20px 25px;
   width: 8px;
@@ -1587,11 +1379,9 @@ body {
   outline: 1px solid transparent;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -1625,23 +1415,6 @@ body {
 
   100% {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@-o-keyframes waving {
-  0% {
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    -o-transform: translate3d(0, 250px, 0) scale(0.5);
-    transform: translate3d(0, 250px, 0) scale(0.5);
-  }
-
-  100% {
-    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 }

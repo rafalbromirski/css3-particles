@@ -55,7 +55,8 @@
 
 <!-- content -->
 <div class="content">
-  <div class="wave">
+  <a href="javascript:startAnimation()" class="button">Start animation</a>
+  <div class="particles">
     <div class="row-1">
       <i></i>
       <i></i>
@@ -316,6 +317,16 @@
 <!-- end -->
 
 <!-- bottom script -->
+<script type="text/javascript">
+  function startAnimation()
+  {
+    var wave = document.querySelector(".wave");
+    wave.setAttribute("class", "wave animate");
+
+    var bt = document.querySelector(".button");
+    bt.setAttribute("class", "button hide")
+  }
+</script>
 <!-- end -->
 
 </body>

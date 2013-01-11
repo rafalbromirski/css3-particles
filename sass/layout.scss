@@ -1,4 +1,8 @@
 // --- compass ---------------------------------------------------------------------------------------------------------
+//
+// Important:
+// I used compass (0.13.alpha.0) because older versions doesn't support animations
+
 
 @import "compass/reset";
 @import "compass/css3";
@@ -10,6 +14,7 @@ $text-color: #444;
 
 $legacy-support-for-ie: false;
 $legacy-support-for-mozilla: false;
+$experimental-support-for-opera: false;
 $experimental-support-for-microsoft: false;
 
 // --- content ---------------------------------------------------------------------------------------------------------
@@ -18,7 +23,6 @@ html, body
 {
   height: 100%;
 }
-
 
 body
 {
@@ -58,7 +62,6 @@ body
       color: #f52954;
       vertical-align: top;
       display: inline-block;
-
       @include border-radius(3px);
       @include transition(all .3s);
 
@@ -78,7 +81,44 @@ body
   }
 }
 
+
 // --- wave ------------------------------------------------------------------------------------------------------------
+
+.button
+{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  margin: 0 0 0 -100px;
+  border: 3px solid #c2c2c2;
+  color: #999;
+  text-align: center;
+  line-height: 20px;
+  padding: 8px 0;
+  z-index: 100;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include transform( translate3d(0,0,0) );
+  @include transition(all .3s, top 0s .3s);
+
+  &:hover
+  {
+    border-color: #333;
+    color: #333;
+  }
+
+  &.hide
+  {
+    opacity: 0;
+    cursor: default;
+    top: -100px;
+    @include transform(scale(1.1));
+  }
+}
 
 .content
 {
@@ -87,7 +127,7 @@ body
   @include perspective-origin(50% 0);
 }
 
-.wave
+.particles
 {
   width: 1000px;
   height: 50px;
@@ -105,16 +145,25 @@ body
       $axisY: -$i * 50px;
       $axisZ: -$i * 50px;
       @include transform( translate3d(0, $axisY, $axisZ) );
+    }
+  }
 
-      > i
+  &.animate
+  {
+    @for $i from 1 through 15
+    {
+      .row-#{$i}
       {
-        @for $j from 1 through 15
+        > i
         {
-          &:nth-child(#{$j})
+          @for $j from 1 through 15
           {
-            $delay: ($j * .2s) + ($i * .1s);
-            // $delay: ($j * .2s + ($i * 3));
-            @include animation(waving 3s $delay ease-in-out infinite);
+            &:nth-child(#{$j})
+            {
+              $delay: ($j * .2s) + ($i * .1s);
+              // $delay: ($j * .2s + ($i * 3));
+              @include animation(waving 3s $delay ease-in-out infinite);
+            }
           }
         }
       }
@@ -134,7 +183,8 @@ body
   }
 }
 
-@include keyframes(waving) {
+@include keyframes(waving)
+{
   0%
   {
     @include transform( translate3d(0, 0, 0) );
