@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
 
-    <title>3D Wave in CSS</title>
-    <meta name="description" content="3D Wave in CSS">
+    <title>CSS3 Animated Particles</title>
+    <meta name="description" content="CSS3 Animated Particles - transform3d, animation, keyframes, css3">
     <meta name="author" content="Rafal Bromirski">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -13,18 +13,19 @@
 <body>
 
 <!-- fork me on github -->
-<a href="http://github.com/paranoida/css-3d-wave" style="position: absolute; top: 40px; right: 0; border: 0; z-index: 100"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<a href="http://github.com/paranoida/css3-particles/" style="position: absolute; top: 40px; right: 0; border: 0; z-index: 100"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <!-- end -->
 
 <!-- bar -->
 <div class="bar">
-  <h1>3D Wave in CSS <a href="http://paranoida.com/experiments/css-3d-wave" class="read-more">&raquo; read more</a></h1>
+    <h1>CSS3 Particles <a href="http://paranoida.com/experiments/css3-particles/" class="read-more">&raquo; read more</a></h1>
 </div>
 <!-- end -->
 
 <!-- content -->
 <div class="content">
-  <div class="wave">
+  <a href="javascript:startAnimation()" class="button">Start animation</a>
+  <div class="particles">
     <div class="row-1">
       <i></i>
       <i></i>
@@ -285,6 +286,16 @@
 <!-- end -->
 
 <!-- bottom script -->
+<script type="text/javascript">
+  function startAnimation()
+  {
+    var wave = document.querySelector(".particles");
+    wave.setAttribute("class", "particles animate");
+
+    var bt = document.querySelector(".button");
+    bt.setAttribute("class", "button hide")
+  }
+</script>
 <!-- end -->
 
 </body>
