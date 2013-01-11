@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8">
 
-    <title>3D Wave in CSS</title>
-    <meta name="description" content="3D Wave in CSS">
+    <title>CSS3 Animated Particles</title>
+    <meta name="description" content="CSS3 Animated Particles - transform3d, animation, keyframes, css3">
     <meta name="author" content="Rafal Bromirski">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/layout.css">
 
     <!-- og (fb) -->
-    <meta property="og:title" content="3D Wave in CSS"/>
-    <meta property="og:description" content="{{description}} http://demos.paranoida.com/css-3d-wave/ via @paranoida"/>
-    <meta property="og:image" content="{{static image}}"/>
+    <meta property="og:title" content="CSS3 Animated Particles"/>
+    <meta property="og:description" content="CSS3 Animated Particles - http://demos.paranoida.com/css3-particles/ via @paranoida"/>
+    <meta property="og:image" content="particles.jpg"/>
     <!-- end -->
 
     <script type="text/javascript">
@@ -34,7 +34,7 @@
 <body>
 
 <!-- fork me on github -->
-<a href="http://github.com/paranoida/css-3d-wave" style="position: absolute; top: 40px; right: 0; border: 0; z-index: 100"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<a href="http://github.com/paranoida/css3-particles/" style="position: absolute; top: 40px; right: 0; border: 0; z-index: 100"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <!-- end -->
 
 <!-- bar -->
@@ -43,13 +43,13 @@
       <!-- AddThis Button BEGIN -->
       <div class="addthis_toolbox addthis_default_style ">
         <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-        <a class="addthis_button_tweet" tw:text="3D Wave in CSS - http://demos.paranoida.com/css-3d-wave/" tw:via="paranoida"></a>
+        <a class="addthis_button_tweet" tw:text="CSS3 Animated Particles - http://demos.paranoida.com/css3-particles/" tw:via="paranoida"></a>
         <a class="addthis_counter addthis_pill_style"></a>
       </div>
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fe8badb0b3cdf55"></script>
       <!-- AddThis Button END -->
     </div>
-    <h1>3D Wave in CSS <a href="http://paranoida.com/experiments/css-3d-wave" class="read-more">&raquo; read more</a></h1>
+    <h1>CSS3 Particles <a href="http://paranoida.com/experiments/css3-particles/" class="read-more">&raquo; read more</a></h1>
 </div>
 <!-- end -->
 
@@ -320,8 +320,8 @@
 <script type="text/javascript">
   function startAnimation()
   {
-    var wave = document.querySelector(".wave");
-    wave.setAttribute("class", "wave animate");
+    var wave = document.querySelector(".particles");
+    wave.setAttribute("class", "particles animate");
 
     var bt = document.querySelector(".button");
     bt.setAttribute("class", "button hide")

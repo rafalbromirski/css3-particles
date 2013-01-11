@@ -1392,8 +1392,8 @@ body {
   }
 
   50% {
-    -moz-transform: translate3d(0, 250px, 0) scale(0.5);
-    transform: translate3d(0, 250px, 0) scale(0.5);
+    -moz-transform: translate3d(0, 200px, 0) scale(0.5);
+    transform: translate3d(0, 200px, 0) scale(0.5);
   }
 
   100% {
@@ -1409,8 +1409,8 @@ body {
   }
 
   50% {
-    -webkit-transform: translate3d(0, 250px, 0) scale(0.5);
-    transform: translate3d(0, 250px, 0) scale(0.5);
+    -webkit-transform: translate3d(0, 200px, 0) scale(0.5);
+    transform: translate3d(0, 200px, 0) scale(0.5);
   }
 
   100% {
@@ -1425,7 +1425,7 @@ body {
   }
 
   50% {
-    transform: translate3d(0, 250px, 0) scale(0.5);
+    transform: translate3d(0, 200px, 0) scale(0.5);
   }
 
   100% {

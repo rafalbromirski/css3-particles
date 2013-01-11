@@ -161,7 +161,6 @@ body
             &:nth-child(#{$j})
             {
               $delay: ($j * .2s) + ($i * .1s);
-              // $delay: ($j * .2s + ($i * 3));
               @include animation(waving 3s $delay ease-in-out infinite);
             }
           }
@@ -191,7 +190,7 @@ body
   }
   50%
   {
-    @include transform( translate3d(0, 250px, 0) scale(.5) );
+    @include transform( translate3d(0, 200px, 0) scale(.5) );
   }
   100%
   {
